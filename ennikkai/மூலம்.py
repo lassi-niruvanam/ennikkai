@@ -27,7 +27,7 @@ def எண்ணுக்கு(உரை):
         if not isinstance(l_sep_dec, list):
             l_sep_dec = [l_sep_dec]
 
-        l_núms = list(d_l['núms'])  # Los números
+        l_núms = list(d_l['எண்கள்'])  # Los números
 
         # Ver si hay posibilidad de un sistema de bases
         try:
