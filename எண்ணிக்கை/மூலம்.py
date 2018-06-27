@@ -3,20 +3,27 @@ from pkg_resources import resource_filename as கோப்புபெயர்
 import json as ஜேஸான்
 
 
-கோப்பு_தகவல்கள் = கோப்புபெயர்('ennikkai', 'தகவல்கள்.json')
+கோப்பு_தகவல்கள் = கோப்புபெயர்('எண்ணிக்கை', 'தகவல்கள்.json')
 with open(கோப்பு_தகவல்கள், encoding='utf8') as கோ:
     தகவல்கள் = ஜேஸான்.load(கோ)
 
 
 def எண்ணுக்கு(உரை):
     """
-    Esta función toma texto de un número en cualquier idioma y lo cambia a un número Python.
 
-    :param: El texto a convertir.
-    :type உரை: str
+    Parameters
+    ----------
+    உரை :
 
-    :return: El número de Python correspondiendo
-    :rtype: float
+    Returns
+    -------
+
+    Examples
+    --------
+    # >>> எண்ணுக்கு('१२३४५.६७')
+    # 12345.67
+    # >>> எண்ணுக்கு('௱௨௰௩,௪')
+    # 123.4
 
     """
 
@@ -110,12 +117,61 @@ def எண்ணுக்கு(உரை):
     raise ValueError('No se pudo decifrar el número %s' % உரை)
 
 
-def உரைக்கு(எண், மொழி):
+def உரைக்கு(எண், மொழி, அடித்தளம்=False):
+    """
+
+    Parameters
+    ----------
+    எண் :
+    மொழி :
+    அடித்தளம் :
+
+    Returns
+    -------
+
+    Examples
+    --------
+    >>> உரைக்கு(1234, 'தமிழ்')
+    '௧௨௩௪'
+
+    >>> உரைக்கு(123.456789, 'தமிழ்')
+    '௧௨௩.௪௫௬௭௮௯'
+
+    >>> உரைக்கு(-123.456789, 'தமிழ்')
+    '-௧௨௩.௪௫௬௭௮௯'
+
+    >>> உரைக்கு(123.456789, '汉语')
+    '一二三.四五六七八九'
+
+    >>> உரைக்கு(123.456789, 'ગુજરાતી')
+    '૧૨૩.૪૫૬૭૮૯'
+
+    """
 
     if isinstance(எண், str):
-        எண்_மூலம் = எண்ணுக்கு(எண்)
+        raise NotImplementedError
+        # எண்_மூலம் = எண்ணுக்கு(எண்)
     else:
         எண்_மூலம் = எண்
+
+    try:
+        வேளி_அகராதி = தகவல்கள்[மொழி]
+    except KeyError:
+        raise KeyError('{} என்று மொழி இப்பொழுது வரை எண்ணிக்கையில் கிடையாது. மண்ணிக்கவும்.'.format(மொழி))
+
+    உரை_எண் = str(எண்_மூலம்)
+    if அடித்தளம்:
+        if 'அடித்தளம்' in வேளி_அகராதி:
+            return வேளியீடு
+        else:
+            pass
+
+    வேளியீடு = உரை_எண்
+    for அ, எ in enumerate(வேளி_அகராதி['எண்கள்']):
+        வேளியீடு = வேளியீடு.replace(str(அ), எ)
+
+    return வேளியீடு
+
 
 
 def _உரை_மொழிபெயர்ப்பு(உரை, ப_எண்கள், சதம_பிரி, திரும்பி_உரை=False):
