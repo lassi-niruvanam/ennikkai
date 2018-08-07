@@ -99,11 +99,11 @@ def _நீட்டிப்பு_தேடல்(மொழி=None):
 def _மொழி_சரிப்பார்க்க(மொழி):
     if isinstance(மொழி, str):
         try:
-            return standard.code(மொழி) | மொழி
+            return standard.numérations(மொழி) or மொழி
         except:
             return மொழி
     elif isinstance(மொழி, list):
-        return [standard.code(மொ) | மொழி for மொ in மொழி]
+        return [standard.numérations(மொ) or மொழி for மொ in மொழி]
     else:
         return None
 
