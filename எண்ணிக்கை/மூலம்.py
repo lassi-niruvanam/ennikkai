@@ -1,22 +1,124 @@
-import re
-from pkg_resources import resource_filename as கோப்புபெயர்
-import json as ஜேஸான்
+import inspect
+import os
+
+from nuchabäl import standard
+
+_நீட்டிப்பு_பட்டியல் = []  # type: list[நீட்டிப்பு_வார்ப்புரு]
 
 
-கோப்பு_தகவல்கள் = கோப்புபெயர்('எண்ணிக்கை', 'தகவல்கள்.json')
-with open(கோப்பு_தகவல்கள், encoding='utf8') as கோ:
-    தகவல்கள் = ஜேஸான்.load(கோ)
+class நீட்டிப்பு_வார்ப்புரு(object):
+    def எண்ணுக்கு(தன், உரை, மொழி=None):
+        """
+
+        Parameters
+        ----------
+        உரை : str
+        மொழி : str
+
+        Returns
+        -------
+        float | int
+        """
+        raise NotImplementedError
+
+    def உரைக்கு(தன், எண், மொழி, மொழி_மூலம்=None, தளம்=None):
+        """
+
+        Parameters
+        ----------
+        எண் : str | float | int
+        மொழி : str
+        மொழி_மூலம் : str
+        தளம் : bool
+
+        Returns
+        -------
+        str
+        """
+        raise NotImplementedError
+
+    def மொழிகள்(தன்):
+        """
+
+        Returns
+        -------
+        list
+        """
+        raise NotImplementedError
+
+    def வழவெளி(தன், மொழி=None):
+        """
+        வழக்கமான வெளிப்பாடு பேற்றும்.
+
+        Parameters
+        ----------
+        மொழி : str | list[str]
+
+        Returns
+        -------
+        str
+        """
+
+        raise NotImplementedError
 
 
-def எண்ணுக்கு(உரை):
+def நீட்டிப்பு_பதிவு(நீட்டிப்பு, ப=None, தோகுதி=None):
+    if ப is None:
+        ப = []
+    if தோகுதி is None:
+        தோகுதி = []
+    if inspect.ismodule(நீட்டிப்பு):
+
+        for ஆ in inspect.getmembers(நீட்டிப்பு):
+            if inspect.isclass(ஆ[1]) and issubclass(ஆ[1], நீட்டிப்பு_வார்ப்புரு) and ஆ[1] is not நீட்டிப்பு_வார்ப்புரு:
+                ப.append(ஆ[1]())
+            elif isinstance(ஆ[1], நீட்டிப்பு_வார்ப்புரு):
+                ப.append(ஆ[1])
+            elif inspect.ismodule(ஆ[1]) and hasattr(ஆ[1], '__file__') and (os.path.split(os.path.relpath(நீட்டிப்பு.__file__, ஆ[1].__file__))[0] == '..'):
+                if ஆ[1] not in தோகுதி:
+                    தோகுதி.append(ஆ[1])
+                    நீட்டிப்பு_பதிவு(ஆ[1], ப=ப, தோகுதி=தோகுதி)
+    elif isinstance(நீட்டிப்பு, நீட்டிப்பு_வார்ப்புரு):
+        ப = [நீட்டிப்பு]
+    else:
+        raise TypeError
+    for நீ in ப:
+        if நீ not in _நீட்டிப்பு_பட்டியல்:
+            _நீட்டிப்பு_பட்டியல்.append(நீ)
+
+def _நீட்டிப்பு_தேடல்(மொழி=None):
+
+    if மொழி is not None:
+        சாத்தியங்கள் = [நீ for நீ in _நீட்டிப்பு_பட்டியல் if மொழி in நீ.மொழிகள்()]
+    else:
+        சாத்தியங்கள் = _நீட்டிப்பு_பட்டியல்
+
+    return சாத்தியங்கள்
+
+
+def _மொழி_சரிப்பார்க்க(மொழி):
+    if isinstance(மொழி, str):
+        try:
+            return standard.code(மொழி) | மொழி
+        except:
+            return மொழி
+    elif isinstance(மொழி, list):
+        return [standard.code(மொ) for மொ in மொழி]
+    else:
+        return None
+
+
+def எண்ணுக்கு(உரை, மொழி=None):
     """
 
     Parameters
     ----------
-    உரை :
+    உரை : str
+    மொழி : str
 
     Returns
     -------
+    int | float
 
     Examples
     --------
@@ -26,105 +128,26 @@ def எண்ணுக்கு(உரை):
     # 123.4
 
     """
+    மொழி = _மொழி_சரிப்பார்க்க(மொழி)
+    சாத்தியங்கள் = _நீட்டிப்பு_தேடல்(மொழி)
 
-    for lengua, d_l in dic_trads.items():
-        # Intentar cada lengua disponible.
-
-        l_sep_dec = d_l['sep_dec']  # El separador de decimales
-        if not isinstance(l_sep_dec, list):
-            l_sep_dec = [l_sep_dec]
-
-        l_núms = list(d_l['எண்கள்'])  # Los números
-
-        # Ver si hay posibilidad de un sistema de bases
+    for நீ in சாத்தியங்கள்:
         try:
-            bases = d_l['bases']
-        except KeyError:
-            bases = None
-
-        # Intentar traducir literalmente, número por número
-        for சதம_பிரி in l_sep_dec:
-            try:
-                núm = _உரை_மொழிபெயர்ப்பு(உரை=உரை, ப_எண்கள்=l_núms, சதம_பிரி=சதம_பிரி)
-                # ¿Funcionó? ¡Perfecto!
-                return núm if சதம_பிரி in உரை else int(núm)
-            except ValueError:
-                pass  # ¿No funcionó? Qué pena. Ahora tenemos que trabajar.
-
-        if bases is not None:
-            # Intentar ver si puede ser un sistema de bases (unidades).
-
-            try:
-
-                # Ver si hay de separar decimales
-                try:
-                    entero, dec = உரை.split(சதம_பிரி)
-                except ValueError:
-                    entero = உரை
-                    dec = None
-
-                # Expresiones RegEx para esta lengua
-                regex_núm = r'[{}]'.format(''.join([n for n in l_núms]))
-                regex_unid = r'[{}]'.format(''.join([b[1] for b in bases]))
-                regex = r'((?P<núm>{})?(?P<unid>{}|$))'.format(regex_núm, regex_unid)
-
-                # Intentar encontrar secuencias de unidades y de números en el உரை.
-                m = re.finditer(regex, entero)
-                resultados = [x for x in list(m) if len(x.group())]
-
-                if not len(resultados):
-                    # Si no encontramos nada, seguir con la próxima lengua
-                    continue
-
-                # Grupos de números y de sus bases (unidades)
-                grupos = resultados[:-1]
-
-                # Dividir en números y en unidades
-                núms = [_உரை_மொழிபெயர்ப்பு(g.group('núm'), ப_எண்கள்=l_núms, சதம_பிரி=சதம_பிரி) for g in grupos]
-                unids = [_உரை_மொழிபெயர்ப்பு(g.group('unid'), ப_எண்கள்=[b[1] for b in bases], சதம_பிரி=சதம_பிரி)
-                         for g in grupos]
-
-                # Calcular el valor de cada número con su base.
-                vals = [núms[i] * u for i, u in enumerate(unids)]
-
-                # Agregar o multiplicar valores, como necesario.
-                val_entero = vals[0]
-                for i, v in enumerate(vals[1:]):
-                    if unids[i + 1] > unids[i]:
-                        val_entero *= v
-                    else:
-                        val_entero += v
-
-                # Calcular el número traducido
-                if dec is not None:
-                    # Si había decima, convertir el உரை decimal
-                    val_dec = _உரை_மொழிபெயர்ப்பு(உரை=dec, ப_எண்கள்=l_núms, சதம_பிரி=சதம_பிரி, திரும்பி_உரை=True)
-
-                    # Calcular el número
-                    núm = float(str(val_entero) + சதம_பிரி + val_dec)
-
-                else:
-                    # ... si no había decimal, no hay nada más que hacer
-                    núm = int(val_entero)
-
-                return núm  # Devolver el número
-
-            except (KeyError, ValueError):
-                # Si no funcionó, intentemos otra lengua
-                pass
-
-    # Si ninguna de las lenguas funcionó, hubo error.
-    raise ValueError('No se pudo decifrar el número %s' % உரை)
+            return நீ.எண்ணுக்கு(உரை, மொழி=மொழி)
+        except ValueError:
+            pass
+    raise ValueError(உரை)
 
 
-def உரைக்கு(எண், மொழி, தளம்=False):
+def உரைக்கு(எண், மொழி, மொழி_மூலம்=None, தளம்=None):
     """
 
     Parameters
     ----------
-    எண் :
-    மொழி :
-    அடித்தளம் :
+    எண் : float | int | str
+    மொழி : str
+    மொழி_மூலம் : str
+    தளம் :
 
     Returns
     -------
@@ -148,68 +171,56 @@ def உரைக்கு(எண், மொழி, தளம்=False):
 
     """
 
+    மொழி = _மொழி_சரிப்பார்க்க(மொழி)
+    மொழி_மூலம் = _மொழி_சரிப்பார்க்க(மொழி_மூலம்)
+
     if isinstance(எண், str):
-        raise NotImplementedError
-        # எண்_மூலம் = எண்ணுக்கு(எண்)
+        சாத்தியங்கள் = _நீட்டிப்பு_தேடல்(மொழி=மொழி_மூலம்)
+        எண்_மூலம் = None
+        for நீ in சாத்தியங்கள்:
+            try:
+                எண்_மூலம் = நீ.எண்ணுக்கு(எண், மொழி=மொழி_மூலம்)
+                break
+            except ValueError:
+                pass
+        if எண்_மூலம் is None:
+            raise ValueError
     else:
         எண்_மூலம் = எண்
 
-    try:
-        வேளி_அகராதி = தகவல்கள்[மொழி]
-    except KeyError:
-        raise KeyError('{} என்று மொழி இப்பொழுது வரை எண்ணிக்கையில் கிடையாது. மண்ணிக்கவும்.'.format(மொழி))
-
-    உரை_எண் = str(எண்_மூலம்)
-    if தளம்:
-        if 'தளம்' in வேளி_அகராதி:
-            return வேளியீடு
-        else:
+    சாத்தியங்கள் = _நீட்டிப்பு_தேடல்(மொழி=மொழி)
+    for நீ in சாத்தியங்கள்:
+        try:
+            return நீ.உரைக்கு(எண்_மூலம், மொழி=மொழி, மொழி_மூலம்=மொழி_மூலம், தளம்=தளம்)
+        except ValueError:
             pass
-
-    வேளியீடு = உரை_எண்
-    for அ, எ in enumerate(வேளி_அகராதி['எண்கள்']):
-        வேளியீடு = வேளியீடு.replace(str(அ), எ)
-
-    return வேளியீடு
+    raise ValueError(எண், மொழி)
 
 
-
-def உரை_மொழிபெயர்ப்பு(உரை, ப_எண்கள், சதம_பிரி, திரும்பி_உரை=False):
-    """
-    Esta función traduce un texto a un valor numérico o de texto (formato latino).
-
-    :param உரை: மூல் உரை.
-    :type உரை: str
-    :param ப_எண்கள்: La lista, en orden ascendente, de los carácteres que corresponden a los números 0, 1, 2, ... 9.
-    :type ப_எண்கள்: list[str]
-    :param சதம_பிரி: சதம பிரிப்பான்
-    :type சதம_பிரி: str
-    :param திரும்பி_உரை: Si hay que devolver en formato de texto
-    :type திரும்பி_உரை: bool
-    :return: El número convertido.
-    :rtype: float | str
+def வழவெளி(மொழி=None):
     """
 
-    if all([அ in ப_எண்கள் + [சதம_பிரி] for அ in உரை]):
-        # Si todos los carácteres en el உரை están reconocidos...
+    Parameters
+    ----------
+    மொழி : str | list[str]
 
-        # Cambiar el separador de decimal a un punto.
-        உரை = உரை.replace(சதம_பிரி, '.')
+    Returns
+    -------
+    str
+    """
 
-        for எ, ஏ in enumerate(ப_எண்கள்):
-            # Reemplazar todos los números también.
-            உரை = உரை.replace(ஏ, str(எ))
+    if isinstance(மொழி, str):
+        மொழி = [மொழி]
 
-        # Devolver el resultado, o en உரை, o en formato numeral.
-        if திரும்பி_உரை:
-            return உரை
-        else:
-            return float(உரை)
+    மொழி = _மொழி_சரிப்பார்க்க(மொழி)
+    சாத்தியங்கள் = {மொ: _நீட்டிப்பு_தேடல்(மொ) for மொ in மொழி}
 
-    else:
-        # Si no se reconocieron todos los carácteres, no podemos hacer nada más.
-        raise ValueError('"{}" என்று உரையை படிக்க தெரியாது.'.format(உரை))
+    return '|'.join(நீ.வழவெளி(மொ) for மொ, நீ in சாத்தியங்கள்.items())
 
 
-def regex(மொழி):
-    return ''.join(['\\u%04x' % x for x in தகவல்கள்[மொழி]['எண்கள்']])
+def மொழிகள்():
+    return list({மொ for நீ in _நீட்டிப்பு_பட்டியல் for மொ in நீ.மொழிகள்() })
+
+
+from . import நீட்டிப்புகள்
+நீட்டிப்பு_பதிவு(நீட்டிப்புகள்)
