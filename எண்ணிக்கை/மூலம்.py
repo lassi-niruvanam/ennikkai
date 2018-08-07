@@ -103,7 +103,7 @@ def _மொழி_சரிப்பார்க்க(மொழி):
         except:
             return மொழி
     elif isinstance(மொழி, list):
-        return [standard.code(மொ) for மொ in மொழி]
+        return [standard.code(மொ) | மொழி for மொ in மொழி]
     else:
         return None
 
