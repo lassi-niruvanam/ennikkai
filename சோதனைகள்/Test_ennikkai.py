@@ -1,8 +1,10 @@
 import unittest
+
 from எண்ணிக்கை import உரைக்கு, எண்ணுக்கு, மொழிகள்
 
 
 class Test_மாற்றம்(unittest.TestCase):
+
     def _எண்_பரிசோதனை(தன், எண்):
 
         for மொ in மொழிகள்():
@@ -24,26 +26,26 @@ class Test_மாற்றம்(unittest.TestCase):
     def test_முழு_எண்_பதி(தன்):
         தன்._எண்_பரிசோதனை(123.)
 
-    def test_vérifier_décimal(தன்):
-        தன்._எண்_பரிசோதனை(0.1)
+    def test_பதின்மம்(தன்):
+        தன்._எண்_பரிசோதனை(0.123456789)
 
-    def test_vérifier_décimal_début(தன்):
+    def test_பதின்மம்_ஆரம்பு(தன்):
         தன்._எண்_பரிசோதனை(.123)
 
-    def test_vérifier_décimal_0_début_multiple_0(தன்):
+    def test_புதியம்_பதின்மம்_பல_புதியம்(தன்):
         தன்._எண்_பரிசோதனை(0.0000123)
 
-    def test_vérifier_décimal_début_multiple_0(தன்):
+    def test_பதின்மம்_ஆரம்பு_பல_புதியம்(தன்):
         தன்._எண்_பரிசோதனை(.0000123)
 
-    def test_vérifier_décimal_multiple_0(தன்):
+    def test_பதின்மம்_பல_புதியம்(தன்):
         தன்._எண்_பரிசோதனை(12.0000123)
 
-    def test_vérifier_négatif(தன்):
+    def test_எதிர்(தன்):
         தன்._எண்_பரிசோதனை(-1.23)
 
-    def test_vérifier_négatif_déc_début(தன்):
+    def test_எதிர்_பதின்மம்_ஆரம்பு(தன்):
         தன்._எண்_பரிசோதனை(-.101)
 
-    def test_vérifier_tout(தன்):
+    def test_எல்லாம்(தன்):
         தன்._எண்_பரிசோதனை(-123456789.00012345678900)
