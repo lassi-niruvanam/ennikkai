@@ -24,6 +24,9 @@ setup(
         'Programming Language :: Python :: 3.7'
     ],
     install_requires=['nuchabal'],
+    dependency_links=[
+        "git+git://github.com/julienmalard/nuchabal.git"
+    ],
     package_data={
         '': ['*.json'],
     },
