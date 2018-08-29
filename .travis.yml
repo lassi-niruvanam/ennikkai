@@ -1,0 +1,21 @@
+language: python
+python:
+- "3.6"
+
+os:
+- linux
+
+install:
+- pip install --upgrade pip setuptools wheel
+- pip install coveralls codecov
+- python setup.py sdist bdist_wheel
+- pip install ennikkai --no-index --find-links=./dist
+- rm -r ennikkai
+
+script:
+- cd சோதனைகள்
+- coverage run -m ennikkai
+
+after_success:
+- coveralls --rcfile=.coveragerc
+- codecov
