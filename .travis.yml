@@ -14,7 +14,7 @@ install:
 
 script:
 - cd சோதனைகள்
-- coverage run -m ennikkai
+- coverage run -m unittest
 
 after_success:
 - coveralls --rcfile=.coveragerc

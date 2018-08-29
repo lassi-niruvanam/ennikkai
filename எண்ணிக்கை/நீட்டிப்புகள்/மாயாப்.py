@@ -32,7 +32,10 @@ class மாயாப்(நீட்டிப்பு_வார்ப்பு
         if எதிர்:
             எண் *= -1
 
-        return எண்
+        if '.' in உரை:
+            return float(எண்)
+        else:
+            return int(எண்)
 
     def உரைக்கு(தன், எண், மொழி="mayab'", மொழி_மூலம்=None, தளம்=None):
         import math
