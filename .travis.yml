@@ -6,7 +6,7 @@ os:
 - linux
 
 install:
-- pip install --upgrade pip setuptools wheel coverage
+- pip install --upgrade pip setuptools wheel
 - pip install -r தேவைகள்.txt
 - pip install coveralls codecov
 - python setup.py sdist bdist_wheel

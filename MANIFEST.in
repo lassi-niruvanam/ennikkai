@@ -1,3 +1,1 @@
-recursive-include எண்ணிக்கை *.json
-
-recursive-include எண்ணிக்கை/நீட்டிப்புகள்/*
+recursive-include எண்ணிக்கை *.json *.txt

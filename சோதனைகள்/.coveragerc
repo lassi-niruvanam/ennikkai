@@ -2,7 +2,6 @@
 source = எண்ணிக்கை
 
 [report]
-
 exclude_lines =
     pragma: no cover
     pragma: sin cobertura
