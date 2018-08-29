@@ -1,0 +1,11 @@
+[run]
+source = எண்ணிக்கை
+
+[report]
+
+exclude_lines =
+    pragma: no cover
+    pragma: sin cobertura
+    def __repr__
+    raise NotImplementedError
+    if __name__ == .__main__.:
