@@ -14,7 +14,8 @@ install:
 - rm -r எண்ணிக்கை
 
 script:
-- coverage run -m unittest சோதனைகள்.மூலம்
+- cd சோதனைகள்
+- coverage run -m unittest மூலம்
 
 after_success:
 - coveralls --rcfile=.சோதனைகள்/coveragerc
