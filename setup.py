@@ -28,6 +28,6 @@ setup(
         "git+git://github.com/julienmalard/nuchabal.git"
     ],
     package_data={
-        '': ['*.json'],
+        '': ['*.json', '*.txt'],
     },
 )
