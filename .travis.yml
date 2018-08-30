@@ -14,8 +14,10 @@ install:
 - rm -r எண்ணிக்கை
 
 script:
-- cd சோதனைகள்
 - coverage run -m unittest
+- python -m unittest சோதனைகள்.Test_ennikkai.Test_மாற்றம்
+- python -m unittest சோதனைகள்.Test_ennikkai.py
+- python -m unittest சோதனைகள்
 
 after_success:
 - coveralls --rcfile=.coveragerc
