@@ -18,5 +18,5 @@ script:
 - coverage run -m unittest மூலம்
 
 after_success:
-- coveralls --rcfile=.சோதனைகள்/coveragerc
+- coveralls --rcfile=.coveragerc
 - codecov

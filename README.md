@@ -47,7 +47,7 @@ print(உரைக்கு(இ, 'ار'))
 ```
 
 ## நிறுவல்
-    `pip install ennikkai`
+    pip install ennikkai
 
 ## சோர்க்கப்பட்ட மொழிகள்
 
