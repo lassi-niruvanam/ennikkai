@@ -14,7 +14,6 @@ install:
 - rm -r எண்ணிக்கை
 
 script:
-- python -m unittest சோதனைகள்.மூலம்.py
 - coverage run -m unittest சோதனைகள்.மூலம்.py
 
 after_success:

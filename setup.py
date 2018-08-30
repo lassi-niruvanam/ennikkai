@@ -10,7 +10,7 @@ with open(os.path.join(கோப்புரை, 'எண்ணிக்கை', 
 setup(
     name='ennikkai',
     version=புதிப்பு,
-    packages=find_packages(),
+    packages=find_packages('./எண்ணிக்கை'),
     url='https://ennikkai.readthedocs.io',
     download_url='https://github.com/julienmalard/ennikkai',
     license='GNU GPL 3',

@@ -1,6 +1,10 @@
 # எண்ணிக்கை
 எல்லாம் உலகத்தின் மொழிகளில் எண்களின் படிப்புதல் மற்றும் எழுதல்.
 
+## நிலை
+[![Build Status](https://travis-ci.org/julienmalard/ennikkai.svg?branch=master)](https://travis-ci.org/julienmalard/ennikkai)
+[![Coverage Status](https://coveralls.io/repos/github/julienmalard/ennikkai/badge.svg?branch=master)](https://coveralls.io/github/julienmalard/ennikkai?branch=master)
+
 ## பயன்பாடு
 பைதான் எண் மூலம் எதாவது மொழியின் எண் கிடைக்கும்.
 
