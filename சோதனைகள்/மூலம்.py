@@ -52,3 +52,8 @@ class Test_மாற்றம்(unittest.TestCase):
 
     def test_புஜியம்(தன்):
         தன்._எண்_பரிசோதனை(0)
+
+
+class Test_உரை_மூலம்_உரை(unittest.TestCase):
+    def test_உரை(தன்):
+        தன்.assertEqual(உரைக்கு('௧௨௩௪௫', 'ગુ'), '૧૨૩૪૫')
