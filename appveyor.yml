@@ -9,16 +9,13 @@ install:
 - "%PYTHON%\\python.exe -m pip install --upgrade pip"
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
 - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
-- "%PYTHON%\\python.exe -m pip install nose"
-- "%PYTHON%\\python.exe -m pip show pip"
-- "%PYTHON%\\python.exe -m pip show wheel"
-- "%PYTHON%\\python.exe -m pip show setuptools"
-- "%PYTHON%\\python.exe -m pip install -r requirements.txt"
+- "%PYTHON%\\python.exe -m pip install -r தேவைகள்.txt"
+- "%PYTHON%\\python.exe setup.py sdist bdist_wheel"
+- "%PYTHON%\\python.exe -m pip install ennikkai --no-index --find-links=./dist"
+- "rm -r எண்ணிக்கை"
 
 build: false
 
 test_script:
-- "nosetests"
-
-after_test:
-- "%PYTHON%\\python.exe setup.py bdist_wheel"
+- "cd சோதனைகள்"
+- "%PYTHON%\\python.exe -m unittest மூலம்"
