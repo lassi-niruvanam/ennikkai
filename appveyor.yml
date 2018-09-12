@@ -17,10 +17,10 @@ install:
 - "%PYTHON%\\python.exe setup.py -q install"
 - ps: cd ..
 - echo %CD%
-- ps: rm -r -f nuchabal
+- ps: rm -r -force nuchabal
 - "%PYTHON%\\python.exe setup.py -q sdist bdist_wheel"
 - "%PYTHON%\\python.exe -m pip install ennikkai -f --no-index --find-links=./dist"
-- ps: rm -r -f "எண்ணிக்கை"
+- ps: rm -r -Force "எண்ணிக்கை"
 - dir
 
 build: false
