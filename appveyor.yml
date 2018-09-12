@@ -10,7 +10,7 @@ install:
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
 - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
 - "git clone https://github.com/julienmalard/nuchabal.git"
-- "cd nuchabal"
+- ps: cd nuchabal
 - "%PYTHON%\\python.exe setup.py -q install"
 - "cd .."
 - "rm -r -f nuchabal"
