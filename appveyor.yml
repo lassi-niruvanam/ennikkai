@@ -13,9 +13,9 @@ install:
 - "cd nuchabal"
 - "%PYTHON%\\python.exe setup.py -q install"
 - "cd .."
-- "rm -r nuchabal"
+- "rm -r -f nuchabal"
 - "%PYTHON%\\python.exe -m pip install ennikkai --no-index --find-links=./dist"
-- "rm -r எண்ணிக்கை"
+- "rm -r -f எண்ணிக்கை"
 
 build: false
 
