@@ -6,7 +6,8 @@ environment:
 
 install:
 - chcp 65001
-- "set PATH=%PATH%;%PYTHON%\\Scripts"
+  -dir
+- set PATH=%PATH%;%PYTHON%\\Scripts
 - "%PYTHON%\\python.exe -m pip install --upgrade pip"
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
 - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
