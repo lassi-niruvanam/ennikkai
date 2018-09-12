@@ -15,11 +15,12 @@ install:
 - "cd .."
 - "rm -r -f nuchabal"
 - "%PYTHON%\\python.exe setup.py -q sdist bdist_wheel"
-- "%PYTHON%\\python.exe -m pip install ennikkai --no-index --find-links=./dist"
+- "%PYTHON%\\python.exe -m pip install ennikkai -f --no-index --find-links=./dist"
 - "rm -r -f எண்ணிக்கை"
 
 build: false
 
 test_script:
+- "dir"
 - "cd சோதனைகள்"
 - "%PYTHON%\\python.exe -m unittest மூலம்"
