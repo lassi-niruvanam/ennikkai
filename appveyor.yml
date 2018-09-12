@@ -9,6 +9,7 @@ install:
 - "%PYTHON%\\python.exe -m pip install --upgrade pip"
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
 - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
+- "git clone https://github.com/julienmalard/nuchabal.git"
 - "%PYTHON%\\python.exe setup.py install"
 - "%PYTHON%\\python.exe -m pip install ennikkai --no-index --find-links=./dist"
 - "rm -r எண்ணிக்கை"
