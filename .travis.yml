@@ -8,6 +8,7 @@ matrix:
 
   - os: osx
     language: generic
+    env: TOXENV=py33
 
 
 install:
