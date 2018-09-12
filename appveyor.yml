@@ -5,7 +5,6 @@ environment:
   - PYTHON: "C:\\Python36-x64"
 
 install:
-- chcp 65001
 - "set PATH=%PATH%;%PYTHON%\\Scripts"
 - "%PYTHON%\\python.exe -m pip install --upgrade pip"
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
