@@ -10,9 +10,12 @@ install:
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
 - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
 - "git clone https://github.com/julienmalard/nuchabal.git"
+- echo %CD%
 - ps: cd nuchabal
+- echo %CD%
 - "%PYTHON%\\python.exe setup.py -q install"
-- "cd .."
+- ps: cd ..
+- echo %CD%
 - "rm -r -f nuchabal"
 - "%PYTHON%\\python.exe setup.py -q sdist bdist_wheel"
 - "%PYTHON%\\python.exe -m pip install ennikkai -f --no-index --find-links=./dist"
