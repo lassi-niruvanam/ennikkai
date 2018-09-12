@@ -10,7 +10,7 @@ install:
 - "%PYTHON%\\python.exe -m pip install --upgrade pip"
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
 - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
-- "git clone https://github.com/julienmalard/nuchabal.git"
+- git clone https://github.com/julienmalard/nuchabal.git
 - echo %CD%
 - ps: cd nuchabal
 - echo %CD%
@@ -26,4 +26,5 @@ build: false
 
 test_script:
 - ps: cd சோதனைகள்
+- echo %CD%
 - "%PYTHON%\\python.exe -m unittest மூலம்"
