@@ -25,6 +25,6 @@ install:
 build: false
 
 test_script:
-- ps: cd சோதனைகள்
+- ps: cd `சோதனைகள்`
 - echo %CD%
 - "%PYTHON%\\python.exe -m unittest மூலம்"
