@@ -6,7 +6,7 @@ environment:
 
 install:
 - chcp 65001
-- set PATH=%PATH%;%PYTHON%\\Scripts
+- "set PATH=%PATH%;%PYTHON%\\Scripts"
 - "%PYTHON%\\python.exe -m pip install --upgrade pip"
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
 - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
@@ -18,8 +18,8 @@ install:
 - ps: cd ..
 - echo %CD%
 - ps: rm -r -f nuchabal
-- %PYTHON%\\python.exe setup.py -q sdist bdist_wheel
-- %PYTHON%\\python.exe -m pip install ennikkai -f --no-index --find-links=./dist
+- "%PYTHON%\\python.exe setup.py -q sdist bdist_wheel"
+- "%PYTHON%\\python.exe -m pip install ennikkai -f --no-index --find-links=./dist"
 - ps: rm -r -f "எண்ணிக்கை"
 - dir
 
