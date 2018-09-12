@@ -21,6 +21,4 @@ install:
 build: false
 
 test_script:
-- "dir"
-- "cd \"சோதனைகள்\""
-- "%PYTHON%\\python.exe -m unittest மூலம்"
+- "%PYTHON%\\python.exe -m unittest சோதனைகள்/மூலம்"
