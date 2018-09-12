@@ -24,4 +24,5 @@ install:
 build: false
 
 test_script:
-- "%PYTHON%\\python.exe -m unittest சோதனைகள்.மூலம்"
+- ps: cd சோதனைகள்
+- "%PYTHON%\\python.exe -m unittest மூலம்"
