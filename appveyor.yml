@@ -9,7 +9,7 @@ install:
 - "%PYTHON%\\python.exe -m pip install --upgrade pip"
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
 - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
-- pip install git+git://github.com/julienmalard/nuchabal.git@master
+- "%PYTHON%\\python.exe -m pip install git+git://github.com/julienmalard/nuchabal.git@master"
 - "%PYTHON%\\python.exe setup.py -q sdist bdist_wheel"
 - "%PYTHON%\\python.exe -m pip install ennikkai -f --no-index --find-links=./dist"
 - ps: rm -r -Force "எண்ணிக்கை"
