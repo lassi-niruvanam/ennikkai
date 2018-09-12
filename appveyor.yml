@@ -10,13 +10,6 @@ install:
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
 - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
 - pip install git+git://github.com/julienmalard/nuchabal.git@master
-- echo %CD%
-- ps: cd nuchabal
-- echo %CD%
-- "%PYTHON%\\python.exe setup.py -q install"
-- ps: cd ..
-- echo %CD%
-- ps: rm -r -force nuchabal
 - "%PYTHON%\\python.exe setup.py -q sdist bdist_wheel"
 - "%PYTHON%\\python.exe -m pip install ennikkai -f --no-index --find-links=./dist"
 - ps: rm -r -Force "எண்ணிக்கை"
@@ -25,6 +18,4 @@ install:
 build: false
 
 test_script:
-- ps: cd சோதனைகள்
-- echo %CD%
-- "%PYTHON%\\python.exe -m unittest \"மூலம்\""
+- "%PYTHON%\\python.exe -m unittest"

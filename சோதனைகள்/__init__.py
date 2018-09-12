@@ -1,0 +1,1 @@
+from .மூலம் import *
