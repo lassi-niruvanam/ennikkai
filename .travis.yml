@@ -10,14 +10,13 @@ matrix:
     language: generic
     env: TOXENV=py33
 
-
 install:
 - pip install --upgrade pip setuptools wheel
 - pip install -r தேவைகள்.txt
 - pip install coveralls codecov
 - python setup.py sdist bdist_wheel
 - pip install ennikkai --no-index --find-links=./dist
-- rm -r -f எண்ணிக்கை
+- rm -r எண்ணிக்கை
 
 script:
 - cd சோதனைகள்
