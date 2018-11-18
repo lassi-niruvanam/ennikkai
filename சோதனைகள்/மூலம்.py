@@ -62,12 +62,11 @@ class Test_வழவெளி(unittest.TestCase):
     def _வழவெளி_பரிசோதனை(தன், எண், பயர்):
 
         for மொ in மொழிகள்():
-            if மொ != "mayab'":
-                with தன்.subTest(பயர், மொழி=மொ):
-                    உரை = உரைக்கு(எண், மொ)
-                    வழ = வழவெளி(மொ)
-                    குழு = re.fullmatch(வழ, உரை)
-                    தன்.assertIsNotNone(குழு)
+            with தன்.subTest(பயர், மொழி=மொ):
+                உரை = உரைக்கு(எண், மொ)
+                வழ = வழவெளி(மொ)
+                குழு = re.fullmatch(வழ, உரை)
+                தன்.assertIsNotNone(குழு)
 
     def test_வழவெளி(தன்):
         for பயர், எண் in எண்கள்.items():
