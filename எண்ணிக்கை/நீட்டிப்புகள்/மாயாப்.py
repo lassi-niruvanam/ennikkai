@@ -22,6 +22,11 @@ class மாயாப்(நீட்டிப்பு_வார்ப்பு
             முழு = உரை
             தசம = None
 
+        if not all(அ in அக_தகவல்கள் for அ in முழு):
+            raise ValueError
+        if தசம is not None and not all(அ in அக_தகவல்கள் for அ in தசம):
+            raise ValueError
+
         for அ in முழு:
             எண் *= 20
             எண் += அக_தகவல்கள்[அ]
