@@ -1,11 +1,9 @@
 language: python
-
 matrix:
   include:
   - os: linux
     sudo: required
     python: 3.6
-
 install:
 - pip install --upgrade pip setuptools wheel
 - pip install -r தேவைகள்.txt
@@ -13,20 +11,17 @@ install:
 - python setup.py sdist bdist_wheel
 - pip install ennikkai --no-index --find-links=./dist
 - rm -r எண்ணிக்கை
-
 script:
 - cd சோதனைகள்
 - coverage run -m unittest மூலம்
-
 after_success:
 - coveralls --rcfile=.coveragerc
 - codecov
-
 deploy:
   provider: pypi
   user: julien.malard
   password:
-    secure: fZ5PkJH+lGdeo4tCSc3UWuZgGmK9/S/t8OHpL8SpPBACbSZLqfEC0mLYcbliG0r2rwsMc6XrVl08FcVSMvnL3IFB95LCLT+R4BpnVIVSt+x3+1AhnyukfMuQUNXgmDwy6BjDF7YXPvKuloWfJH7rt1ywmxfxEewAnggIZ4nEwed/Ke734+6Fmd92rpeUsqm0/sBIeypc/GpSm61r5wfK4B6caMJhjKCq6sEyXV5PQmKrC/IhObLI2S0cuyXo8NO0nOZ1L0j8cf5we8a+m82MdPDtvcnPzAR9kXcxU9bvhWV12FtF7bqegYkNE0LlGE2QGDqAcLf2hCdgi05boSd24e5Dar8/gqJTzbzIDbXLo798IGTfIAVIsXO1iexhV3DyfYuXsJzq7u36xt4mso5xFBPyJGmXZR11mSreE14cPov05EGLea1aK7mzvi9ti3/ayTaVD2gmedmQR9lVvXLU3raxHWxSDFUlwhzyxq9+nuqRroG/BatpNxOnLm22qLZjUnZnLkyt+l4bhG8V7a3dL5jNOVsr22eJyxT2DfdbAdCuPVkaD4WVhd+CBU5EdT/fGkHAyrfsbpaay2gUBadgMiSI4EP/TRPzrdQHFmYUYpKyxYVokzzQe4Ftac+Jwkeoo1TxcUhWaZpYyxLnD53wgTcHWM0bxxVpakjDN4JOz2g=
+    secure: bAECAmArZu18zbCHO7B2Tq6XCUqdCW7BsDngKw+oJP6Cjn7ueFGOA2xAxsOIjkiO+QsqcMEGRZlYziad+3+Pck9bGE6pkBGANfEzb6x3rnKjKYBv5G6/MrRCZOyi/H8zy7yjajKaP27XnvRaYg3nPSSbekzqG3JReV3EJTXySdqmkE2nwg8opMpPsY5414ZvVqdiRHezoCIMFt3vPd3X5NzpdrmSHgGCiEX0pBs/D1avT+tQWZ0gGPXBiEVm1nHnY67VlcDBWHHEVKm6vrXYMVdrZVBqZN2rg4W549guXki6elJ/8oZKCoUWMC5FR50jKPdTZqyQR+zbnOcxiYlhLRWlM6r3v2LbEjf3fB+x1SQDPeDeGvGMTeg64rBfMJS2hUMB8qyqV/36lb0HFqHWdQIhPejpP+0krnODWh49wzT1z0aAEyLHiIvnmaXJzX/UxlJyWAFbncOVr/UFYtFQsxR2VGyIpGKtuK8tvNdohHNJ5i1peQdKZxacR7LrU+Qv4wR/5bTyUrmwZ+FpFAN995Q1jL52+sHw0UOsE3sYKDTLxN5H7DlEaXmickmYVx+JeVgz3V2l1EuFBSpmnY/CVGzdezhxHa3fj+sc4VMRtj/glfmwZhHc7ujSeNnfcX8PcjLP3JK/QOHUmQgHJrzhz8prSofVOHgBvD5KbIi2Gk4=
   distributions: sdist bdist_wheel
   skip_existing: true
   on:
