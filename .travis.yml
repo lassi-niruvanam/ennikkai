@@ -17,12 +17,3 @@ script:
 after_success:
 - coveralls --rcfile=.coveragerc
 - codecov
-deploy:
-  provider: pypi
-  user: julien.malard
-  password:
-    secure: bAECAmArZu18zbCHO7B2Tq6XCUqdCW7BsDngKw+oJP6Cjn7ueFGOA2xAxsOIjkiO+QsqcMEGRZlYziad+3+Pck9bGE6pkBGANfEzb6x3rnKjKYBv5G6/MrRCZOyi/H8zy7yjajKaP27XnvRaYg3nPSSbekzqG3JReV3EJTXySdqmkE2nwg8opMpPsY5414ZvVqdiRHezoCIMFt3vPd3X5NzpdrmSHgGCiEX0pBs/D1avT+tQWZ0gGPXBiEVm1nHnY67VlcDBWHHEVKm6vrXYMVdrZVBqZN2rg4W549guXki6elJ/8oZKCoUWMC5FR50jKPdTZqyQR+zbnOcxiYlhLRWlM6r3v2LbEjf3fB+x1SQDPeDeGvGMTeg64rBfMJS2hUMB8qyqV/36lb0HFqHWdQIhPejpP+0krnODWh49wzT1z0aAEyLHiIvnmaXJzX/UxlJyWAFbncOVr/UFYtFQsxR2VGyIpGKtuK8tvNdohHNJ5i1peQdKZxacR7LrU+Qv4wR/5bTyUrmwZ+FpFAN995Q1jL52+sHw0UOsE3sYKDTLxN5H7DlEaXmickmYVx+JeVgz3V2l1EuFBSpmnY/CVGzdezhxHa3fj+sc4VMRtj/glfmwZhHc7ujSeNnfcX8PcjLP3JK/QOHUmQgHJrzhz8prSofVOHgBvD5KbIi2Gk4=
-  distributions: sdist bdist_wheel
-  skip_existing: true
-  on:
-    tags: true
