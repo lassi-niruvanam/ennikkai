@@ -1,19 +1,28 @@
 language: python
 matrix:
   include:
-  - os: linux
-    sudo: required
-    python: 3.6
+    - os: linux
+      sudo: required
+      python: 3.6
 install:
-- pip install --upgrade pip setuptools wheel
-- pip install -r தேவைகள்.txt
-- pip install coveralls codecov
-- python setup.py sdist bdist_wheel
-- pip install ennikkai --no-index --find-links=./dist
-- rm -r எண்ணிக்கை
+  - pip install --upgrade pip setuptools wheel
+  - pip install -r தேவைகள்.txt
+  - pip install coveralls codecov
+  - python setup.py sdist bdist_wheel
+  - pip install ennikkai --no-index --find-links=./dist
 script:
-- cd சோதனைகள்
-- coverage run -m unittest மூலம்
+  - cd சோதனைகள்
+  - coverage run -m unittest மூலம்
 after_success:
-- coveralls --rcfile=.coveragerc
-- codecov
+  - coveralls --rcfile=.coveragerc
+  - codecov
+  - cd ..
+deploy:
+  provider: pypi
+  user: julien.malard
+  password:
+    secure: RoqurmTWcwDZivfU/LkTrkNieA+K6CPQZZ51Ptra6DJD23GC380jzOUd/t5CwF8XcpHjRE4hzk+7r5uzPRJqwwQdRl1/bjgiVZ6ZzTPvjmmeDWXhzEq/4AEpDX42uaHYwreuvvt9yVaTfN6dvzh9YFaj6R+W5TwhWDNoN1qPF9CrnURTBAmJPRl/DqOy2ONrzfDFnXr0fNop2xG2ldHKw28KrgmEp7E1uAxxtWycBmIC/Db2dOyYeezF6z7pnEIw/vsvYhnWSimeD40DDDQw4TCroGbH7BkCw/ZrZhIbrLGkTLf2a/6yTH8N7TyOAPbvc/31cwBp6/62kpMUeDOK1OEPawa6tks+v81JQ5XNj2n9JdzqImZeRBAOUfjiacNpnUkvYqunPt/17PCeRNABEIrp+XFrD3k2eDaqJTMKV3r7sXyFu2fImpkfbnGX3MV0Qom0K7SBc5MyuHTUaj52H0O7qqzkGgQWpn5of569z8i78vwBARcZtQ1xDl23gtM8HsdlqSwEOXlMH96JuYp/fv0nkVpW1eCofoNMvHfClm61C6sEM5jimux6w5/GB5hK0msWJyDWur2X9hgzIGST+MKVLJM/8OVPU6bzIvcOj1Yi+t1k/MEKIoPriiCg5WExv83wcP7pJhXwJG3wApzhjDDbBJ8tSaCPbkREmEyEync=
+  distributions: sdist bdist_wheel
+  skip_existing: true
+  on:
+    tags: true
