@@ -3,7 +3,7 @@
 
 ## நிலை
 [![Build Status](https://travis-ci.org/julienmalard/ennikkai.svg?branch=master)](https://travis-ci.org/julienmalard/ennikkai)
-[![Build status](https://ci.appveyor.com/api/projects/status/06m0e097gahel2ij?svg=true)](https://ci.appveyor.com/project/julienmalard/ennikkai)
+[![Build status](https://ci.appveyor.com/api/projects/status/06m0e097gahel2ij/branch/master?svg=true)](https://ci.appveyor.com/project/julienmalard/ennikkai)
 [![மேற்பார்க்கப்பட்ட அளவு](https://coveralls.io/repos/github/julienmalard/ennikkai/badge.svg?branch=master)](https://coveralls.io/github/julienmalard/ennikkai?branch=master)
 
 ## பயன்பாடு
