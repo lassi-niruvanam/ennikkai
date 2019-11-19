@@ -23,8 +23,7 @@ setup(
     long_description=தகவல்கள்,
     classifiers=[
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7'
+        'Natural Language :: Tamil'
     ],
     install_requires=['nuchabal'],
     dependency_links=[

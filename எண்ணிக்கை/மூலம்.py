@@ -1,117 +1,45 @@
-import inspect
-import os
-from typing import List
+from typing import Dict
 
 from nuchabäl import chijun
 
-_நீட்டிப்பு_பட்டியல் = []  # type: List[நீட்டிப்பு_வார்ப்புரு]
+from .நீட்டிப்புகள் import மாயர், பதினமம்
+from .வார்ப்புரு import நீட்டிப்பு_வார்ப்புரு
+
+_நீட்டிப்புகள் = {}  # type: Dict[str, நீட்டிப்பு_வார்ப்புரு]
 
 
-class நீட்டிப்பு_வார்ப்புரு(object):
-    def எண்ணுக்கு(தன், உரை, மொழி=None):
-        """
-
-        Parameters
-        ----------
-        உரை : str
-        மொழி : str
-
-        Returns
-        -------
-        float | int
-        """
-        raise NotImplementedError
-
-    def உரைக்கு(தன், எண், மொழி, மொழி_மூலம்=None, தளம்=None):
-        """
-
-        Parameters
-        ----------
-        எண் : str | float | int
-        மொழி : str
-        மொழி_மூலம் : str
-        தளம் : bool
-
-        Returns
-        -------
-        str
-        """
-        raise NotImplementedError
-
-    def மொழிகள்(தன்):
-        """
-
-        Returns
-        -------
-        list
-        """
-        raise NotImplementedError
-
-    def வழவெளி(தன், மொழி):
-        """
-        வழக்கமான வெளிப்பாடு பேற்றும்.
-
-        Returns
-        -------
-        str
-        """
-
-        raise NotImplementedError
+def நீட்டிப்பு_பதிவு(நீட்டிப்பு):
+    if isinstance(நீட்டிப்பு, நீட்டிப்பு_வார்ப்புரு):
+        நீட்டிப்பு = [நீட்டிப்பு]
+    for நீ in நீட்டிப்பு:
+        for மொ in நீ.மொழிகள்():
+            _நீட்டிப்புகள்[மொ] = நீ
 
 
-def நீட்டிப்பு_பதிவு(நீட்டிப்பு, ப=None, தோகுதி=None):
-    if ப is None:
-        ப = []
-    if தோகுதி is None:
-        தோகுதி = []
-    if inspect.ismodule(நீட்டிப்பு):
-
-        for ஆ in inspect.getmembers(நீட்டிப்பு):
-            if inspect.isclass(ஆ[1]) and issubclass(ஆ[1], நீட்டிப்பு_வார்ப்புரு) and ஆ[1] is not நீட்டிப்பு_வார்ப்புரு:
-                ப.append(ஆ[1]())
-            elif isinstance(ஆ[1], நீட்டிப்பு_வார்ப்புரு):
-                ப.append(ஆ[1])
-            elif inspect.ismodule(ஆ[1]) and hasattr(ஆ[1], '__file__') and \
-                    (os.path.split(os.path.relpath(நீட்டிப்பு.__file__, ஆ[1].__file__))[0] == '..'):
-                if ஆ[1] not in தோகுதி:
-                    தோகுதி.append(ஆ[1])
-                    நீட்டிப்பு_பதிவு(ஆ[1], ப=ப, தோகுதி=தோகுதி)
-    elif isinstance(நீட்டிப்பு, நீட்டிப்பு_வார்ப்புரு):
-        ப = [நீட்டிப்பு]
-    else:
-        raise TypeError
-    for நீ in ப:
-        if நீ not in _நீட்டிப்பு_பட்டியல்:
-            _நீட்டிப்பு_பட்டியல்.append(நீ)
+நீட்டிப்பு_பதிவு([மாயர்(), பதினமம்()])
 
 
 def _நீட்டிப்பு_தேடல்(மொழி=None):
-
     if மொழி is not None:
-        சாத்தியங்கள் = [நீ for நீ in _நீட்டிப்பு_பட்டியல் if மொழி in நீ.மொழிகள்()]  # எண் அமைப்புமுறை
-
-        if not len(சாத்தியங்கள்):
-            மொழி, குறி = _மொழி_சரிப்பார்க்க(மொழி)
-            சாத்தியங்கள் += [நீ for நீ in _நீட்டிப்பு_பட்டியல் if மொழி in நீ.மொழிகள்() or குறி in நீ.மொழிகள்()]
+        அமைப்புகள் = _மொழி_சரிப்பார்க்க(மொழி)
+        சாத்தியங்கள் = [next(_நீட்டிப்புகள்[மொ] for மொ in அமைப்புகள் if மொ and மொ in _நீட்டிப்புகள்)]
     else:
-        சாத்தியங்கள் = _நீட்டிப்பு_பட்டியல்
+        சாத்தியங்கள் = list(set(_நீட்டிப்புகள்.values()))
 
     return மொழி, சாத்தியங்கள்
 
 
 def _மொழி_சரிப்பார்க்க(மொழி):
-    if isinstance(மொழி, str):
-        try:
-            return chijun.rajilanïk(மொழி), மொழி
-        except ValueError:
-            try:
-                return chijun.ruchabäl(மொழி), chijun.runuk(மொழி)
-            except ValueError:
-                return மொழி, None
+    try:
+        அமைப்பு = chijun.rajilanïk(மொழி)
+    except ValueError:
+        அமைப்பு = None
 
-
-def _மொழி_குறியீடு(மொழி):
-    return
+    try:
+        குறி = chijun.runuk(chijun.ruchabäl(மொழி))
+    except ValueError:
+        குறி = None
+    return (அமைப்பு, குறி, மொழி)
 
 
 def எண்ணுக்கு(உரை, மொழி=None):
@@ -221,8 +149,4 @@ def வழவெளி(மொழி=None):
 
 
 def மொழிகள்():
-    return list({மொ for நீ in _நீட்டிப்பு_பட்டியல் for மொ in நீ.மொழிகள்() })
-
-
-from . import நீட்டிப்புகள்
-நீட்டிப்பு_பதிவு(நீட்டிப்புகள்)
+    return list(_நீட்டிப்புகள்)

@@ -3,9 +3,8 @@ import re
 from math import floor
 
 from pkg_resources import resource_filename as கோப்புபெயர்
-
-from எண்ணிக்கை.நீட்டிப்புகள் import _உரை
-from ..மூலம் import நீட்டிப்பு_வார்ப்புரு
+from எண்ணிக்கை.நீட்டிப்புகள்.கருவிகள் import _உரை
+from எண்ணிக்கை.வார்ப்புரு import நீட்டிப்பு_வார்ப்புரு
 
 கோப்பு_தகவல்கள் = கோப்புபெயர்('எண்ணிக்கை.நீட்டிப்புகள்', 'பதின்மம்_தகவல்கள்.json')
 with open(கோப்பு_தகவல்கள், encoding='utf8') as கோ:
