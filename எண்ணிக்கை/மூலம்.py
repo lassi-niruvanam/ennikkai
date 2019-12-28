@@ -39,7 +39,7 @@ def _மொழி_சரிப்பார்க்க(மொழி):
         குறி = chijun.runuk(chijun.ruchabäl(மொழி))
     except ValueError:
         குறி = None
-    return (அமைப்பு, குறி, மொழி)
+    return அமைப்பு, குறி, மொழி
 
 
 def எண்ணுக்கு(உரை, மொழி=None):
