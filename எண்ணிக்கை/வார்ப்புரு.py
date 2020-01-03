@@ -1,50 +1,19 @@
-class நீட்டிப்பு_வார்ப்புரு(object):
-    def எண்ணுக்கு(தன், உரை, மொழி=None):
-        """
+import re
 
-        Parameters
-        ----------
-        உரை : str
-        மொழி : str
 
-        Returns
-        -------
-        float | int
-        """
+class எண்குறிமுறைமை(object):
+    def __init__(தன், பெயர், ஒருங்குறி):
+        தன்.பெயர் = பெயர்
+        தன்.ஒருங்குறி = ஒருங்குறி
+
+    def எண்ணுக்கு(தன், உரை):
         raise NotImplementedError
 
-    def உரைக்கு(தன், எண், மொழி, மொழி_மூலம்=None, தளம்=None):
-        """
-
-        Parameters
-        ----------
-        எண் : str | float | int
-        மொழி : str
-        மொழி_மூலம் : str
-        தளம் : bool
-
-        Returns
-        -------
-        str
-        """
+    def உரைக்கு(தன், எண்):
         raise NotImplementedError
 
-    def மொழிகள்(தன்):
-        """
-
-        Returns
-        -------
-        list
-        """
+    def சுருங்குறித்தொடர்(தன், வடிவம்):
         raise NotImplementedError
 
-    def வழவெளி(தன், மொழி):
-        """
-        வழக்கமான வெளிப்பாடு பேற்றும்.
-
-        Returns
-        -------
-        str
-        """
-
-        raise NotImplementedError
+    def சரிபார்ப்பு(தன், உரை):
+        return re.fullmatch(தன்.சுருங்குறித்தொடர்(), உரை) is not None

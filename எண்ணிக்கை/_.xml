@@ -1,0 +1,16 @@
+<numberingSystems>
+    <numberingSystem id="armn" type="algorithmic" rules="armenian-upper"/>
+    <numberingSystem id="armnlow" type="algorithmic" rules="armenian-lower"/>
+    <numberingSystem id="cyrl" type="algorithmic" rules="cyrillic-lower"/>
+    <numberingSystem id="geor" type="algorithmic" rules="georgian"/>
+    <numberingSystem id="grek" type="algorithmic" rules="greek-upper"/>
+    <numberingSystem id="greklow" type="algorithmic" rules="greek-lower"/>
+    <numberingSystem id="hebr" type="algorithmic" rules="hebrew"/>
+    <numberingSystem id="romanlow" type="algorithmic" rules="roman-lower"/>
+    hant
+</numberingSystems>
+"ᨲ᩠ᩅᩫᨾᩮᩥᩬᨦ": {
+    "வகை": "இடஞ்சார்",
+    "ஒருங்குறி": "lanatham",
+    "குறிகள்": "᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙"
+  },
