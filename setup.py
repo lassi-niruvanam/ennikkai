@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 கோப்புரை = os.path.split(os.path.realpath(__file__))[0]
 
-with open(os.path.join(கோப்புரை, 'எண்ணிக்கை', 'புதிப்பு.txt'), encoding='utf8') as கோ:
+with open(os.path.join(கோப்புரை, 'எண்ணிக்கை', 'பதிப்பு.txt'), encoding='utf8') as கோ:
     புதிப்பு = கோ.read().strip()
 
 with open(os.path.join(கோப்புரை, 'README.md'), encoding='utf8') as கோ:
