@@ -4,7 +4,7 @@ from functools import lru_cache
 from nuchabäl.rukux import chijun
 try:
     from pkg_resources import resource_filename as கோப்புபெயர்
-except ImportError:
+except (ImportError, ModuleNotFoundError):
     கோப்புபெயர் = None
 
 from .அடிமானம் import அடிமானம்
