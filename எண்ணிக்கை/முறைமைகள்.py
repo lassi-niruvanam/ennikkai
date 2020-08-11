@@ -2,14 +2,17 @@ import json as ஜேஸான்
 from functools import lru_cache
 
 from nuchabäl.rukux import chijun
-from pkg_resources import resource_filename as கோப்புபெயர்
+try:
+    from pkg_resources import resource_filename as கோப்புபெயர்
+except ImportError:
+    கோப்புபெயர் = None
 
 from .அடிமானம் import அடிமானம்
 from .இடஞ்சார் import இடஞ்சார்
 
 முறைமைகள் = {}
 
-கோப்பு = கோப்புபெயர்('எண்ணிக்கை', 'தகவல்கள்.json')
+கோப்பு = கோப்புபெயர்('எண்ணிக்கை', 'தகவல்கள்.json') if கோப்புபெயர் else 'தகவல்கள்.json'
 with open(கோப்பு, encoding='utf8') as கோ:
     தகவல்கள் = ஜேஸான்.load(கோ)
 
