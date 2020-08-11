@@ -7,9 +7,6 @@ from setuptools import setup, find_packages
 with open(os.path.join(கோப்புரை, 'எண்ணிக்கை', 'பதிப்பு.txt'), encoding='utf8') as கோ:
     புதிப்பு = கோ.read().strip()
 
-with open(os.path.join(கோப்புரை, 'README.md'), encoding='utf8') as கோ:
-    தகவல்கள் = கோ.read().strip()
-
 setup(
     name='ennikkai',
     version=புதிப்பு,
@@ -20,7 +17,6 @@ setup(
     author='ஜூலீஎன் ஜான் மலர் (Julien Jean Malard)',
     author_email='julien.malard@mail.mcgill.ca',
     description='எண் மொழிபெயர்ப்பு',
-    long_description=தகவல்கள்,
     classifiers=[
         'Programming Language :: Python :: 3',
         'Natural Language :: Tamil'
