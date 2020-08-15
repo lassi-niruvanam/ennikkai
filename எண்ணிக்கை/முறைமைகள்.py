@@ -1,25 +1,15 @@
 import json as ஜேஸான்
+import os
 from functools import lru_cache
 
 from nuchabäl.rukux import chijun
-
-try:
-    from pkg_resources import resource_filename as கோப்புபெயர்
-except (ImportError, ModuleNotFoundError):
-    கோப்புபெயர் = None
-
 from .அடிமானம் import அடிமானம்
 from .இடஞ்சார் import இடஞ்சார்
 
 முறைமைகள் = {}
 
-if கோப்புபெயர்:
-    with open(கோப்புபெயர்('எண்ணிக்கை', 'தகவல்கள்.json'), encoding='utf8') as கோ:
-        தகவல்கள் = ஜேஸான்.load(கோ)
-else:
-    from .தகவல்கள் import தகவல்கள்
-
-    தகவல்கள் = ஜேஸான்.loads(தகவல்கள்)
+with open(os.path.join(os.path.split(__file__)[0], 'தகவல்கள்.json'), encoding='utf8') as கோ:
+    தகவல்கள் = ஜேஸான்.load(கோ)
 
 for பெயர், விவரங்கள் in தகவல்கள்.items():
 
