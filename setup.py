@@ -11,7 +11,7 @@ with open(os.path.join(கோப்புரை, 'எண்ணிக்கை', 
 
 setup(
     name='ennikkai',
-    version='1.2.4',
+    version='1.2.5',
     packages=find_packages(exclude=['சோதனைகள்']),
     url='https://ennikkai.readthedocs.io',
     download_url='https://github.com/julienmalard/ennikkai',
