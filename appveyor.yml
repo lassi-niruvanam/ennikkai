@@ -13,4 +13,4 @@ install:
 build: false
 
 test_script:
-- 'poetry run pytest -s சோதனைகள்/மூலம்.py'
+- 'poetry run pytest -s சோதனைகள்/மூலம்.py -qq'
