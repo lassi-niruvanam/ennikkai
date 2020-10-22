@@ -8,7 +8,7 @@ install:
 - "set PATH=%PATH%;%PYTHON%\\Scripts"
 - "%PYTHON%\\python.exe -m pip install --upgrade pip coveralls codecov poetry"
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
-- "poetry install -v"
+- "poetry install -v -q"
 
 build: false
 
