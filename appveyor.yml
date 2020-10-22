@@ -2,16 +2,15 @@ environment:
 
   matrix:
 
-  - PYTHON: "C:\\Python36-x64"
+  - PYTHON: "C:\\Python38-x64"
 
 install:
 - "set PATH=%PATH%;%PYTHON%\\Scripts"
-- "%PYTHON%\\python.exe -m pip install --upgrade pip"
+- "%PYTHON%\\python.exe -m pip install --upgrade pip coveralls codecov poetry"
 - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
-- "%PYTHON%\\python.exe -m pip install --upgrade wheel"
-- "%PYTHON%\\python.exe setup.py -q install"
+- "poetry install -v"
 
 build: false
 
 test_script:
-- "%PYTHON%\\python.exe -m unittest"
+- 'poetry run pytest --cov="மூலம்" -s சோதனைகள்/மூலம்.py'

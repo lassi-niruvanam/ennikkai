@@ -25,8 +25,7 @@ class இடஞ்சார்(எண்குறிமுறைமை):
             if any(பி in உரை for பி in தன்.பிரிப்பு):
                 உரை = re.sub(rf'[{தன்.பிரிப்பு}]', '.', உரை)
                 return float(உரை)
-            else:
-                return int(உரை)
+            return int(உரை)
         else:
             அடி = தன்.அடிமானம்
 
@@ -59,8 +58,7 @@ class இடஞ்சார்(எண்குறிமுறைமை):
                 எண் *= -1
             if any(பி in உரை for பி in தன்.பிரிப்பு):
                 return float(எண்)
-            else:
-                return int(எண்)
+            return int(எண்)
 
     def உரைக்கு(தன், எண்):
         if தன்.அடிமானம் == 10:
@@ -117,6 +115,5 @@ def எ_சுற்று(எண்):
     உரை = str(எண்)
     if 'e' not in உரை:
         return len(உரை)
-    else:
-        ச, த = உரை.split('e-')
-        return int(த) + len(ச)
+    ச, த = உரை.split('e-')
+    return int(த) + len(ச)
