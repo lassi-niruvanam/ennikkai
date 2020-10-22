@@ -1,1 +1,1 @@
-from .மூலம் import *
+

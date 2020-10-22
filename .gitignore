@@ -22,3 +22,5 @@ build/
 # Documentación #
 #################
 docs/.tx/*
+
+.coverage
