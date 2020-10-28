@@ -13,7 +13,7 @@ install:
   - poetry install -v
 
 script:
-  - poetry run pytest --cov="மூலம்" -s சோதனைகள்/மூலம்.py
+  - poetry run pytest
 
 after_success:
 - coveralls --rcfile=.coveragerc
