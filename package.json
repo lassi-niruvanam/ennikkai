@@ -1,0 +1,32 @@
+{
+  "name": "ennikkai",
+  "version": "1.2.5",
+  "description": "எண் மொழிபெயர்ப்பு",
+  "main": "வாடிகையாளர்.js",
+  "scripts": {
+    "dev": "parcel எண்ணிக்கை/வாடிகையாளர்.js",
+    "build": "parcel build எண்ணிக்கை/வாடிகையாளர்.js",
+    "test": "mocha -r esm --recursive \"./சோதனைகள்/*.js\"  --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julienmalard/ennikkai.git"
+  },
+  "keywords": [
+    "எண்ணிக்கை"
+  ],
+  "author": "ஜூலீஎன் ஜான் மலர் அதம்",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/julienmalard/ennikkai/issues"
+  },
+  "homepage": "https://github.com/julienmalard/ennikkai#readme",
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "mocha": "^8.1.3",
+    "mocha-loader": "^5.1.2"
+  }
+}
