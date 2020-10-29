@@ -10,6 +10,8 @@ env:
 install:
   - pip install poetry
   - pip install coveralls codecov
+  - poetry update
+  - poetry run python3 build.py
   - poetry install -v
 
 script:
