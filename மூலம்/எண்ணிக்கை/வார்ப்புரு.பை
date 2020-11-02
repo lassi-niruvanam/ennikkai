@@ -7,13 +7,13 @@
         தன்.ஒருங்குறி = ஒருங்குறி
 
     நிரல்பாகம் எண்ணுக்கு(தன், உரை):
-        raise NotImplementedError 
+        எழுப்பு NotImplementedError
 
     நிரல்பாகம் உரைக்கு(தன், எண்):
-        raise NotImplementedError 
+        எழுப்பு NotImplementedError
 
     நிரல்பாகம் சுருங்குறித்தொடர்(தன், வடிவம்):
-        raise NotImplementedError 
+        எழுப்பு NotImplementedError
 
-    நிரல்பாகம் சரிபார்ப்பு(தன் , உரை ) :
-        பின்கொடு re . fullmatch ( தன் . சுருங்குறித்தொடர் ( ) , உரை ) is not ஒன்றுமில்லை 
+    நிரல்பாகம் சரிபார்ப்பு(தன், உரை ):
+        பின்கொடு re.fullmatch(தன்.சுருங்குறித்தொடர்(), உரை) is not ஒன்றுமில்லை

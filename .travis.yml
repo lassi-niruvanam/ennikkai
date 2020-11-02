@@ -10,14 +10,15 @@ env:
 install:
   - pip install poetry
   - pip install coveralls codecov
-  - poetry update
-  - poetry run python3 build.py
+  - poetry install --no-root
+  - poetry run lassi compiler
   - poetry install -v
 
 script:
   - poetry run pytest
 
 after_success:
+- poetry build
 - coveralls --rcfile=.coveragerc
 - codecov
 - cd ..

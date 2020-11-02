@@ -21,6 +21,9 @@ pytest-subtests = "^0.3.2"
 coverage = {extras = ["toml"], version = "^5.3"}
 pytest-cov = "^2.10.1"
 
+[tool.lassi]
+lang = "த"
+
 [tool.pytest.ini_options]
 addopts = "--cov=\"எண்ணிக்கை\" சோதனைகள்/மூலம்.py"
 
@@ -32,5 +35,5 @@ branch = true
 source = ["எண்ணிக்கை"]
 
 [build-system]
-requires = ["poetry-core>=1.0.0", "lassi"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
