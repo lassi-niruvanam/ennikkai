@@ -1,6 +1,6 @@
 
 var expect    = require("chai").expect
-import { முறைமைகள், உரைக்கு, எண்ணுக்கு } from "../dist/வாடிகையாளர்"
+import { முறைமைகள், உரைக்கு, எண்ணுக்கு } from "../விநியோகம்/எண்ணிக்கை/வாடிக்கையாளர்"
 
 describe("எண்ணிக்கை", function() {
   describe("முறைமைகள் சோதனை", function() {
