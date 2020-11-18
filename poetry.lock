@@ -87,14 +87,20 @@ version = "0.1.6"
 description = "லஸ்ஸி"
 category = "main"
 optional = false
-python-versions = ">=3.8,<4.0"
+python-versions = "^3.8"
 
 [package.dependencies]
-click = ">=7.1.1,<8.0.0"
-ennikkai = ">=1.2.1,<2.0.0"
-lassi-ilakkanankal = ">=1.0.12,<2.0.0"
-regex = ">=2020,<2021"
-toml = ">=0.10.2,<0.11.0"
+click = "^7.1.1"
+ennikkai = "^1.2.1"
+lassi-ilakkanankal = "^1.0.12"
+regex = "^2020"
+toml = "^0.10.2"
+
+[package.source]
+type = "git"
+url = "https://github.com/lassi-samaaj/lassi.git"
+reference = "master"
+resolved_reference = "3959b1215f91fda96ceb1a81e55010c53cee8bd4"
 
 [[package]]
 name = "lassi-ilakkanankal"
@@ -240,7 +246,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "199d427210293d1a09ec93c365dba244f2ad9cfce917dd6ee5f7a5e592c2ae53"
+content-hash = "2b4d282c14853a309d682fe5e41fed7f4cec2087658abdb549f38a8913d4c146"
 
 [metadata.files]
 atomicwrites = [
@@ -307,10 +313,7 @@ lark-parser = [
     {file = "lark-parser-0.11.1.tar.gz", hash = "sha256:20bdefdf1b6e9bcb38165ea5cc4f27921a99c6f4c35264a3a953fd60335f1f8c"},
     {file = "lark_parser-0.11.1-py2.py3-none-any.whl", hash = "sha256:8b747e1f544dcc2789e3feaddd2a50c6a73bed69d62e9c69760c1e1f7d23495f"},
 ]
-lassi = [
-    {file = "lassi-0.1.6-py3-none-any.whl", hash = "sha256:2016d2fe60f445955146c57469ef6fe6c27eaf944a34b6d84a642e1ca0a963ba"},
-    {file = "lassi-0.1.6.tar.gz", hash = "sha256:570a9f684fbb791431a62a90067ed0227ed6b4d0aa016568d33145a0b44b0b0f"},
-]
+lassi = []
 lassi-ilakkanankal = [
     {file = "lassi-ilakkanankal-1.0.12.tar.gz", hash = "sha256:13e7ea719237a252e2257f4e39baa02dec68db5505dbc4ed97603c86c29bf381"},
     {file = "lassi_ilakkanankal-1.0.12-py3-none-any.whl", hash = "sha256:39230882644e515e2ace852e0f7b80ed6960baf14f9374ea16589f0ebaba8f66"},
