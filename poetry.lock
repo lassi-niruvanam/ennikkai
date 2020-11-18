@@ -92,7 +92,7 @@ python-versions = "^3.8"
 [package.dependencies]
 click = "^7.1.1"
 ennikkai = "^1.2.1"
-lassi-ilakkanankal = "^1.0.12"
+lassi-ilakkanankal = "branch master"
 regex = "^2020"
 toml = "^0.10.2"
 
@@ -100,7 +100,7 @@ toml = "^0.10.2"
 type = "git"
 url = "https://github.com/lassi-samaaj/lassi.git"
 reference = "master"
-resolved_reference = "3959b1215f91fda96ceb1a81e55010c53cee8bd4"
+resolved_reference = "66647836e7d93b467934873026c3556737a9e307"
 
 [[package]]
 name = "lassi-ilakkanankal"
@@ -108,13 +108,19 @@ version = "1.0.12"
 description = "லஸ்ஸி மென்பொருளுக்காக இலக்கணம் விவரக்குறிப்புகள்"
 category = "main"
 optional = false
-python-versions = ">=3.8,<4.0"
+python-versions = "^3.8"
 
 [package.dependencies]
-ennikkai = ">=1.2.5,<2.0.0"
-lark-parser = "*"
-nuchabal = ">=0.0.1,<0.0.2"
-semantic-version = ">=2.8.5,<3.0.0"
+ennikkai = "^1.2.5"
+lark-parser = "=>0.8.5"
+nuchabal = "^0.0.1"
+semantic-version = "^2.8.5"
+
+[package.source]
+type = "git"
+url = "https://github.com/lassi-samaaj/lassi-ilakkanangal.git"
+reference = "master"
+resolved_reference = "dce9ee5693bf6d6977f2f2eafb039967f0ee2b9a"
 
 [[package]]
 name = "nuchabal"
@@ -314,10 +320,7 @@ lark-parser = [
     {file = "lark_parser-0.11.1-py2.py3-none-any.whl", hash = "sha256:8b747e1f544dcc2789e3feaddd2a50c6a73bed69d62e9c69760c1e1f7d23495f"},
 ]
 lassi = []
-lassi-ilakkanankal = [
-    {file = "lassi-ilakkanankal-1.0.12.tar.gz", hash = "sha256:13e7ea719237a252e2257f4e39baa02dec68db5505dbc4ed97603c86c29bf381"},
-    {file = "lassi_ilakkanankal-1.0.12-py3-none-any.whl", hash = "sha256:39230882644e515e2ace852e0f7b80ed6960baf14f9374ea16589f0ebaba8f66"},
-]
+lassi-ilakkanankal = []
 nuchabal = [
     {file = "nuchabal-0.0.1-py3-none-any.whl", hash = "sha256:e37376d5f525a7d670ed9af14773d147873b53bb3ddfda4e01dbe8b6ff4d983e"},
     {file = "nuchabal-0.0.1.tar.gz", hash = "sha256:6680b6bca7cceb3c99c5b4a3f5ee368d4f5ba9d1843db60714b2e3ef228bd70d"},
