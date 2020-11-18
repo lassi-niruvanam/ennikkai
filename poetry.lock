@@ -71,7 +71,7 @@ python-versions = "*"
 
 [[package]]
 name = "lark-parser"
-version = "0.10.1"
+version = "0.11.1"
 description = "a modern parsing library"
 category = "main"
 optional = false
@@ -83,7 +83,7 @@ regex = ["regex"]
 
 [[package]]
 name = "lassi"
-version = "0.1.5"
+version = "0.1.6"
 description = "லஸ்ஸி"
 category = "main"
 optional = false
@@ -240,7 +240,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "8075eb7bff6d4d6b6dff28b7dc7e4466b54ddf9fdd69d4784e2f0ddfbb70cbbe"
+content-hash = "199d427210293d1a09ec93c365dba244f2ad9cfce917dd6ee5f7a5e592c2ae53"
 
 [metadata.files]
 atomicwrites = [
@@ -304,11 +304,12 @@ iniconfig = [
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
 ]
 lark-parser = [
-    {file = "lark-parser-0.10.1.tar.gz", hash = "sha256:42f367612a1bbc4cf9d8c8eb1b209d8a9b397d55af75620c9e6f53e502235996"},
+    {file = "lark-parser-0.11.1.tar.gz", hash = "sha256:20bdefdf1b6e9bcb38165ea5cc4f27921a99c6f4c35264a3a953fd60335f1f8c"},
+    {file = "lark_parser-0.11.1-py2.py3-none-any.whl", hash = "sha256:8b747e1f544dcc2789e3feaddd2a50c6a73bed69d62e9c69760c1e1f7d23495f"},
 ]
 lassi = [
-    {file = "lassi-0.1.5-py3-none-any.whl", hash = "sha256:52013277212eaf1e7d870840ce4be37e95873f80728e50bee6bda2fb0d6e1353"},
-    {file = "lassi-0.1.5.tar.gz", hash = "sha256:ed13225df1d9dbb21081caa3c17d0023056edee518c3d8727d67e12558c14147"},
+    {file = "lassi-0.1.6-py3-none-any.whl", hash = "sha256:2016d2fe60f445955146c57469ef6fe6c27eaf944a34b6d84a642e1ca0a963ba"},
+    {file = "lassi-0.1.6.tar.gz", hash = "sha256:570a9f684fbb791431a62a90067ed0227ed6b4d0aa016568d33145a0b44b0b0f"},
 ]
 lassi-ilakkanankal = [
     {file = "lassi-ilakkanankal-1.0.12.tar.gz", hash = "sha256:13e7ea719237a252e2257f4e39baa02dec68db5505dbc4ed97603c86c29bf381"},

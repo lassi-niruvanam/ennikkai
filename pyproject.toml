@@ -13,7 +13,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.8"
 nuchabal = "^0.0.1"
-lassi = '0.1.5'
+lassi = '0.1.6'
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.0.2"
