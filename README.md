@@ -60,6 +60,10 @@ re.search(வ, 'எண் = ௱௨௰௩.௪௫௬').group()
 ```
 
 ## நிறுவல்
+    poetry add ennikkai
+
+அல்லது...
+
     pip install ennikkai
 
 ## சேர்க்கப்பட்ட மொழிகள்
