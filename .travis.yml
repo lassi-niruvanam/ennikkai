@@ -8,6 +8,7 @@ env:
   global:
     - TX_BRANCH="master"
 install:
+  - python -m pip install --upgrade pip
   - pip install poetry
   - pip install coveralls codecov
   - poetry install --no-root
