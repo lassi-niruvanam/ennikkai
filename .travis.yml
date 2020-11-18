@@ -9,8 +9,7 @@ env:
     - TX_BRANCH="master"
 install:
   - python -m pip install --upgrade pip
-  - pip install poetry
-  - pip install coveralls codecov
+  - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
   - poetry install --no-root
   - poetry run lassi compiler
   - poetry install -v
@@ -20,6 +19,7 @@ script:
 
 after_success:
 - poetry build
+- pip install coveralls codecov
 - coveralls --rcfile=.coveragerc
 - codecov
 - cd ..
