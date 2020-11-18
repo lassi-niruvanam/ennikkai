@@ -7,12 +7,13 @@ license = "AGPL-3.0-or-later"
 repository = "https://github.com/julienmalard/ennikkai"
 documentation = "https://ennikkai.readthedocs.io"
 packages = [
-    { include = 'எண்ணிக்கை', from = 'மூலம்' }
+    { include = 'எண்ணிக்கை', from = 'விநியோகம்' }
 ]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 nuchabal = "^0.0.1"
+lassi = { git = "https://github.com/lassi-samaaj/lassi.git", branch = "master" }
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.0.2"
@@ -20,11 +21,15 @@ pytest-subtests = "^0.3.2"
 coverage = {extras = ["toml"], version = "^5.3"}
 pytest-cov = "^2.10.1"
 
+
+[tool.lassi]
+lang = "த"
+
 [tool.pytest.ini_options]
-addopts = "--cov=\"மூலம்\" -s சோதனைகள்/மூலம்.py"
+addopts = "--cov=\"எண்ணிக்கை\" சோதனைகள்/மூலம்.py"
 
 [tool.coverage.paths]
-source = ["மூலம்"]
+source = ["எண்ணிக்கை"]
 
 [tool.coverage.run]
 branch = true

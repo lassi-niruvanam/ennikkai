@@ -24,3 +24,7 @@ build/
 docs/.tx/*
 
 .coverage
+விநியோகம்
+node_modules/
+.DS_Store
+.cache/
