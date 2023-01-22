@@ -1,6 +1,6 @@
 {
   "name": "ennikkai",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "எண் மொழிபெயர்ப்பு",
   "main": "விநியோகம்/குறியீட்டு.js",
   "scripts": {
