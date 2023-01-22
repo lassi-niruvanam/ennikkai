@@ -28,3 +28,8 @@ docs/.tx/*
 node_modules/
 .DS_Store
 .cache/
+
+
+# JS
+node_modules
+விநியோகம்

@@ -1,0 +1,63 @@
+{
+  "name": "ennikkai",
+  "version": "1.2.5",
+  "description": "எண் மொழிபெயர்ப்பு",
+  "main": "விநியோகம்/குறியீட்டு.js",
+  "scripts": {
+    "copierDonnées": "cp ../வளங்கள்/தகவல்கள்.json மூலம்/தகவல்கள்.json",
+    "nettoyer": "rimraf dist",
+    "compiler": "pnpm copierDonnées && pnpm versioner && pnpm nettoyer && pnpm ttsc -p tsconfig.build.json",
+    "test": "pnpm copierDonnées && node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
+    "couverture": "pnpm test -- --coverage",
+    "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
+    "publier": "pnpm test && pnpm compiler && (git commit -a -m 'version' || true) && pnpm publish",
+    "versioner": "pnpm genversion  --es6 --semi மூலம்/பதிப்பு.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julienmalard/ennikkai.git"
+  },
+  "keywords": [
+    "எண்ணிக்கை"
+  ],
+  "author": "ஜூலீஎன் ஜான் மலர் அதம்",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/julienmalard/ennikkai/issues"
+  },
+  "homepage": "https://github.com/julienmalard/ennikkai#readme",
+  "devDependencies": {
+    "@types/jest": "^29.2.6",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "genversion": "^3.1.1",
+    "jest": "^29.3.1",
+    "rimraf": "^4.1.1",
+    "ts-jest": "^29.0.3",
+    "tsconfig-paths": "^4.1.0",
+    "tscpaths": "^0.0.9",
+    "ttypescript": "^1.5.15",
+    "typescript": "^4.8.4",
+    "typescript-transform-paths": "^3.4.6"
+  },
+  "jest": {
+    "transform": {
+      "(.*).ts$": [
+        "ts-jest",
+        {
+          "useESM": true
+        }
+      ]
+    },
+    "preset": "ts-jest/presets/default-esm",
+    "moduleNameMapper": {
+      "^@/(.*).js$": "<rootDir>/மூலம்/$1",
+      "^@/(.*)$": "<rootDir>/மூலம்/$1"
+    },
+    "testMatch": [
+      "**/*.சோதனை.ts"
+    ],
+    "testEnvironment": "node"
+  }
+}
