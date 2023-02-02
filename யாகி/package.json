@@ -1,15 +1,15 @@
 {
   "name": "ennikkai",
-  "version": "1.2.8",
+  "version": "2.0.0",
   "description": "எண் மொழிபெயர்ப்பு",
   "main": "விநியோகம்/குறியீட்டு.js",
   "scripts": {
     "copierDonnées": "cp ../வளங்கள்/தகவல்கள்.json மூலம்/தகவல்கள்.json",
-    "nettoyer": "rimraf dist",
+    "nettoyer": "rimraf விநியோகம்",
     "compiler": "pnpm copierDonnées && pnpm versioner && pnpm nettoyer && pnpm ttsc -p tsconfig.build.json",
     "test": "pnpm copierDonnées && node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
     "couverture": "pnpm test -- --coverage",
-    "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
+    "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts மூலம்",
     "publier": "pnpm compiler && (git commit -a -m 'version' || true) && pnpm publish",
     "versioner": "pnpm genversion  --es6 --semi மூலம்/பதிப்பு.ts"
   },
@@ -21,18 +21,21 @@
     "எண்ணிக்கை"
   ],
   "author": "ஜூலீஎன் ஜான் மலர் அதம்",
-  "license": "GPL-3.0-or-later",
+  "license": "AGPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/julienmalard/ennikkai/issues"
   },
   "homepage": "https://github.com/julienmalard/ennikkai#readme",
   "devDependencies": {
+    "@constl/ipa": "^0.6.8",
     "@types/jest": "^29.2.6",
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
-    "eslint": "^7.22.0",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
     "genversion": "^3.1.1",
     "jest": "^29.3.1",
+    "prettier": "^2.8.3",
     "rimraf": "^4.1.1",
     "ts-jest": "^29.0.3",
     "tsconfig-paths": "^4.1.0",
@@ -59,5 +62,13 @@
       "**/*.சோதனை.ts"
     ],
     "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@lassi-js/kili": "^0.0.2",
+    "deepmerge": "^4.3.0",
+    "events": "^3.3.0"
+  },
+  "peerDependencies": {
+    "@constl/ipa": "^0.6.8"
   }
 }
