@@ -2,7 +2,7 @@
 name = "எண்ணிக்கை"
 version = "1.2.5"
 description = "எண் மொழிபெயர்ப்பு."
-authors = ["JulienMalard <julien.malard@mail.mcgill.ca>"]
+authors = ["Julien Malard-Adam <julien.malard@mail.mcgill.ca>"]
 license = "AGPL-3.0-or-later"
 repository = "https://github.com/julienmalard/ennikkai"
 documentation = "https://ennikkai.readthedocs.io"

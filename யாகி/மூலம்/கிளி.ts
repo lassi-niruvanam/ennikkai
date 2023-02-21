@@ -1,4 +1,4 @@
-import ClientConstellation, { bds } from "@constl/ipa/";
+import ClientConstellation, { bds } from "@constl/ipa";
 import { கிளி } from "@lassi-js/kili";
 
 import {

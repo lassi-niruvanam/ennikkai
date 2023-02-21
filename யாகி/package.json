@@ -1,6 +1,6 @@
 {
   "name": "ennikkai",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "எண் மொழிபெயர்ப்பு",
   "main": "விநியோகம்/குறியீட்டு.js",
   "scripts": {
@@ -27,21 +27,21 @@
   },
   "homepage": "https://github.com/julienmalard/ennikkai#readme",
   "devDependencies": {
-    "@constl/ipa": "^0.6.8",
-    "@types/jest": "^29.2.6",
-    "@typescript-eslint/eslint-plugin": "^5.50.0",
-    "@typescript-eslint/parser": "^5.50.0",
-    "eslint": "^8.33.0",
+    "@constl/ipa": "^0.6.33",
+    "@types/jest": "^29.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "genversion": "^3.1.1",
-    "jest": "^29.3.1",
-    "prettier": "^2.8.3",
+    "jest": "^29.4.3",
+    "prettier": "^2.8.4",
     "rimraf": "^4.1.2",
-    "ts-jest": "^29.0.3",
-    "tsconfig-paths": "^4.1.0",
+    "ts-jest": "^29.0.5",
+    "tsconfig-paths": "^4.1.2",
     "tscpaths": "^0.0.9",
     "ttypescript": "^1.5.15",
-    "typescript": "^4.8.4",
+    "typescript": "^4.9.5",
     "typescript-transform-paths": "^3.4.6"
   },
   "jest": {
@@ -64,7 +64,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@lassi-js/kili": "^0.0.2",
+    "@lassi-js/kili": "^0.0.5",
     "deepmerge": "^4.3.0",
     "events": "^3.3.0"
   },
