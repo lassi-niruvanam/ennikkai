@@ -1,6 +1,6 @@
 {
   "name": "ennikkai",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "எண் மொழிபெயர்ப்பு",
   "main": "விநியோகம்/குறியீட்டு.js",
   "scripts": {
@@ -69,6 +69,6 @@
     "events": "^3.3.0"
   },
   "peerDependencies": {
-    "@constl/ipa": "^0.6.8"
+    "@constl/ipa": "^0.7.3"
   }
 }
