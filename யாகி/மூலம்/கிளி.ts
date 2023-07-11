@@ -1,4 +1,4 @@
-import ClientConstellation, { bds } from "@constl/ipa";
+import { bds, client } from "@constl/ipa";
 import { கிளி } from "@lassi-js/kili";
 
 import {
@@ -78,7 +78,7 @@ export type எண்ணிக்கை_கிளி = கிளி<முறை
 export const கிளி_தயாரிப்பு = ({
   விண்மீன்,
 }: {
-  விண்மீன்: ClientConstellation;
+  விண்மீன்: client.ClientConstellation;
 }): எண்ணிக்கை_கிளி => {
   return new கிளி<முறைமை_தகவல்_வரிசை>({
     விண்மீன்: விண்மீன்,

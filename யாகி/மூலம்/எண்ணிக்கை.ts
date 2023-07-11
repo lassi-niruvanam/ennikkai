@@ -1,4 +1,4 @@
-import type ClientConstellation from "@constl/ipa";
+import type {client} from "@constl/ipa";
 import type { utils } from "@constl/ipa";
 
 import type {
@@ -25,11 +25,11 @@ import {
 
 export class எண்ணிக்கை {
   விண்மீன்_தகவல்கள்: எண்ணிக்கை_தகவல்கள்_வகை;
-  விண்மீன்?: ClientConstellation;
+  விண்மீன்?: client.ClientConstellation;
   நடவடிக்கைகள்: EventEmitter;
   கிளியை_மறந்துவிடு?: utils.schémaFonctionOublier;
 
-  constructor({ விண்மீன் }: { விண்மீன்?: ClientConstellation }) {
+  constructor({ விண்மீன் }: { விண்மீன்?: client.ClientConstellation }) {
     this.விண்மீன் = விண்மீன்;
     this.விண்மீன்_தகவல்கள் = {};
     this.நடவடிக்கைகள் = new EventEmitter();
