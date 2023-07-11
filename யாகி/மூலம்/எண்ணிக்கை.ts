@@ -1,5 +1,4 @@
-import type {client} from "@constl/ipa";
-import type { utils } from "@constl/ipa";
+import type {client, utils} from "@constl/ipa";
 
 import type {
   அடிமானம்_எண்_வகை,
@@ -12,7 +11,7 @@ import merge from "deepmerge";
 import { EventEmitter } from "events";
 
 import _தகவல்கள் from "@/தகவல்கள்.json" assert { type: "json" };
-import { எண்ணிக்கை_கிளி, கிளி_தயாரிப்பு } from "./கிளி";
+import { எண்ணிக்கை_கிளி, கிளி_தயாரிப்பு } from "./கிளி.js";
 import {
   முறைமை_அடிமானங்கள்_நெடுவரிசை_குறியீடு,
   முறைமை_அடுக்குக்குறி_நெடுவரிசை_குறியீடு,
@@ -21,7 +20,7 @@ import {
   முறைமை_குறியீடு_நெடுவரிசை_குறியீடு,
   முறைமை_பிரிப்பு_நெடுவரிசை_குறியீடு,
   முறைமை_வகை_நெடுவரிசை_குறியீடு,
-} from "./மாறிலிகள்";
+} from "./மாறிலிகள்.js";
 
 export class எண்ணிக்கை {
   விண்மீன்_தகவல்கள்: எண்ணிக்கை_தகவல்கள்_வகை;
