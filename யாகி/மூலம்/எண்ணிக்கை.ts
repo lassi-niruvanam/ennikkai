@@ -1,4 +1,5 @@
-import type {client, utils} from "@constl/ipa";
+import type {types} from "@constl/ipa";
+import type {MandataireClientConstellation} from "@constl/mandataire";
 
 import type {
   அடிமானம்_எண்_வகை,
@@ -24,11 +25,11 @@ import {
 
 export class எண்ணிக்கை {
   விண்மீன்_தகவல்கள்: எண்ணிக்கை_தகவல்கள்_வகை;
-  விண்மீன்?: client.ClientConstellation;
+  விண்மீன்?: MandataireClientConstellation;
   நடவடிக்கைகள்: EventEmitter;
-  கிளியை_மறந்துவிடு?: utils.schémaFonctionOublier;
+  கிளியை_மறந்துவிடு?: types.schémaFonctionOublier;
 
-  constructor({ விண்மீன் }: { விண்மீன்?: client.ClientConstellation }) {
+  constructor({ விண்மீன் }: { விண்மீன்?: MandataireClientConstellation }) {
     this.விண்மீன் = விண்மீன்;
     this.விண்மீன்_தகவல்கள் = {};
     this.நடவடிக்கைகள் = new EventEmitter();
@@ -360,7 +361,7 @@ export class எண்ணிக்கை {
   முறைமைகளை_பின்பற்று({
     செ,
   }: {
-    செ: utils.schémaFonctionSuivi<string[]>;
+    செ: types.schémaFonctionSuivi<string[]>;
   }): () => void {
     return this.பின்பற்று(() => செ(this.முறைமைகள்));
   }
@@ -372,7 +373,7 @@ export class எண்ணிக்கை {
   }: {
     எண்: number;
     மொழி: string;
-    செ: utils.schémaFonctionSuivi<string>;
+    செ: types.schémaFonctionSuivi<string>;
   }): () => void {
     return this.பின்பற்று(() => செ(this.உரைக்கு({ எண், மொழி })));
   }
@@ -384,7 +385,7 @@ export class எண்ணிக்கை {
   }: {
     உரை: string;
     மொழி: string;
-    செ: utils.schémaFonctionSuivi<number>;
+    செ: types.schémaFonctionSuivi<number>;
   }): () => void {
     return this.பின்பற்று(() => செ(this.எண்ணுக்கு({ உரை, மொழி })));
   }

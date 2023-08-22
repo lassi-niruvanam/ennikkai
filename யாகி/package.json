@@ -1,6 +1,6 @@
 {
   "name": "ennikkai",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "description": "எண் மொழிபெயர்ப்பு",
   "type": "module",
   "types": "./விநியோகம்/குறியீட்டு.d.ts",
@@ -29,7 +29,8 @@
   },
   "homepage": "https://github.com/julienmalard/ennikkai#readme",
   "devDependencies": {
-    "@constl/ipa": "^0.7.3",
+    "@constl/ipa": "^0.8.1",
+    "@constl/mandataire": "^0.1.13",
     "@types/jest": "^29.5.3",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
@@ -66,11 +67,11 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@lassi-js/kili": "^0.1.1",
+    "@lassi-js/kili": "^0.2.2",
     "deepmerge": "^4.3.1",
     "events": "^3.3.0"
   },
   "peerDependencies": {
-    "@constl/ipa": "^0.7.3"
+    "@constl/ipa": "^0.8.1"
   }
 }

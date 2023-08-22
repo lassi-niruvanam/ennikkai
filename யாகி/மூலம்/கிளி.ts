@@ -1,5 +1,6 @@
-import { bds, client } from "@constl/ipa";
+import type { bds } from "@constl/ipa";
 import { கிளி } from "@lassi-js/kili";
+import type { MandataireClientConstellation } from "@constl/mandataire"
 
 import {
   எண்ணிக்கை_சிறப்பு_சொல்,
@@ -18,7 +19,6 @@ import {
   முறைமை_அடுக்குக்குறி_மாறி_குறியீடு,
   முறைமை_அடிமானங்கள்_மாறி_குறியீடு,
   முறைமை_பிரிப்பு_மாறி_குறியீடு,
-  தரவுத்தள_அடையாளம்,
   கிளி_குழு_அடையாளம்,
 } from "@/மாறிலிகள்.js";
 
@@ -78,15 +78,12 @@ export type எண்ணிக்கை_கிளி = கிளி<முறை
 export const கிளி_தயாரிப்பு = ({
   விண்மீன்,
 }: {
-  விண்மீன்: client.ClientConstellation;
+  விண்மீன்: MandataireClientConstellation;
 }): எண்ணிக்கை_கிளி => {
   return new கிளி<முறைமை_தகவல்_வரிசை>({
     விண்மீன்: விண்மீன்,
-    மாறிலிகள்: {
       அட்டவணை_சாபி,
       வார்ப்புரு: தரவுத்தள_வார்ப்புரு,
-      தரவுத்தள_அடையாளம்: தரவுத்தள_அடையாளம்,
       குழு_அடையாளம்: கிளி_குழு_அடையாளம்,
-    },
   });
 };
