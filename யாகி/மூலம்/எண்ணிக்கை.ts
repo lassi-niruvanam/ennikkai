@@ -1,5 +1,4 @@
-import type {types} from "@constl/ipa";
-import type {MandataireClientConstellation} from "@constl/mandataire";
+import type {ClientConstellation, types} from "@constl/ipa";
 
 import type {
   அடிமானம்_எண்_வகை,
@@ -25,11 +24,11 @@ import {
 
 export class எண்ணிக்கை {
   விண்மீன்_தகவல்கள்: எண்ணிக்கை_தகவல்கள்_வகை;
-  விண்மீன்?: MandataireClientConstellation;
+  விண்மீன்?: ClientConstellation;
   நடவடிக்கைகள்: EventEmitter;
   கிளியை_மறந்துவிடு?: types.schémaFonctionOublier;
 
-  constructor({ விண்மீன் }: { விண்மீன்?: MandataireClientConstellation }) {
+  constructor({ விண்மீன் }: { விண்மீன்?: ClientConstellation }) {
     this.விண்மீன் = விண்மீன்;
     this.விண்மீன்_தகவல்கள் = {};
     this.நடவடிக்கைகள் = new EventEmitter();

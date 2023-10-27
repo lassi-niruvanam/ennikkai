@@ -1,6 +1,5 @@
-import type { bds } from "@constl/ipa";
+import type { bds, ClientConstellation } from "@constl/ipa";
 import { கிளி } from "@lassi-js/kili";
-import type { MandataireClientConstellation } from "@constl/mandataire"
 
 import {
   எண்ணிக்கை_சிறப்பு_சொல்,
@@ -78,7 +77,7 @@ export type எண்ணிக்கை_கிளி = கிளி<முறை
 export const கிளி_தயாரிப்பு = ({
   விண்மீன்,
 }: {
-  விண்மீன்: MandataireClientConstellation;
+  விண்மீன்: ClientConstellation;
 }): எண்ணிக்கை_கிளி => {
   return new கிளி<முறைமை_தகவல்_வரிசை>({
     விண்மீன்: விண்மீன்,
