@@ -1,6 +1,6 @@
 {
   "name": "ennikkai",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "எண் மொழிபெயர்ப்பு",
   "type": "module",
   "types": "./விநியோகம்/குறியீட்டு.d.ts",
