@@ -1602,7 +1602,7 @@ packages:
       crypto-js: 4.2.0
       deep-equal: 2.2.3
       deepcopy: 2.1.0
-      ennikkai: 2.2.6(@constl/ipa@1.0.0)
+      ennikkai: 2.2.7(@constl/ipa@1.0.0)
       env-paths: 3.0.0
       events: 3.3.0
       genversion: 3.2.0
@@ -4872,10 +4872,10 @@ packages:
     dependencies:
       once: 1.4.0
 
-  /ennikkai@2.2.6(@constl/ipa@1.0.0):
-    resolution: {integrity: sha512-HuzqKxRvdN4ymi1Dd1r2KvSsL37O3wddJd/TG5wMj92szLnV3hNg6Xt+xwvv70Mi1fG8XkT7SfEFzOk92ETM5g==}
+  /ennikkai@2.2.7(@constl/ipa@1.0.0):
+    resolution: {integrity: sha512-LfwBjW3IC4aOstvGLoHQ4rWeK9Y5OplHHfjsozbMbaplczn/kKnpXQ2gqZpfkZRYNOL5CSp9nYQb9XW5++nxFQ==}
     peerDependencies:
-      '@constl/ipa': ^0.9.6
+      '@constl/ipa': ^1.0.0
     dependencies:
       '@constl/ipa': 1.0.0(react-native@0.73.4)(wrtc@0.4.7)
       '@lassi-js/kili': 0.3.9(@constl/ipa@1.0.0)
