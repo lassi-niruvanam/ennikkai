@@ -1,6 +1,6 @@
 {
   "name": "ennikkai",
-  "version": "2.2.6",
+  "version": "2.2.7",
   "description": "எண் மொழிபெயர்ப்பு",
   "type": "module",
   "types": "./விநியோகம்/குறியீட்டு.d.ts",
@@ -71,6 +71,6 @@
     "events": "^3.3.0"
   },
   "peerDependencies": {
-    "@constl/ipa": "^0.9.6"
+    "@constl/ipa": "^1.0.0"
   }
 }
