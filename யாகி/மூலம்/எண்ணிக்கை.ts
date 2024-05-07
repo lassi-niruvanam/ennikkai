@@ -10,7 +10,7 @@ import type {
 import merge from "deepmerge";
 import { EventEmitter } from "events";
 
-import _தகவல்கள் from "@/தகவல்கள்.json" assert { type: "json" };
+import _தகவல்கள் from "@/தகவல்கள்.json" with { type: "json" };
 import { எண்ணிக்கை_கிளி, கிளி_தயாரிப்பு } from "@/கிளி.js";
 import {
   முறைமை_அடிமானங்கள்_நெடுவரிசை_குறியீடு,
