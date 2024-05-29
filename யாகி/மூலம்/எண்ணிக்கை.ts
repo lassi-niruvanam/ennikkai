@@ -9,6 +9,7 @@ import type {
 
 import merge from "deepmerge";
 import { EventEmitter } from "events";
+import TypedEmitter from "typed-emitter";
 
 import _தகவல்கள் from "@/தகவல்கள்.json" with { type: "json" };
 import { எண்ணிக்கை_கிளி, கிளி_தயாரிப்பு, முறைமை_தகவல்_வரிசை } from "@/கிளி.js";
@@ -23,23 +24,30 @@ import {
 } from "@/மாறிலிகள்.js";
 import { பிணையம்_பரிந்துரை } from "@lassi-js/kili";
 
+type எண்ணிக்கை_நடவடிக்கைகள் = {
+  "கிளி தயார்": (கிளி: எண்ணிக்கை_கிளி) => void,
+  "மாற்றம்": () => void
+}
+
 export class எண்ணிக்கை {
   விண்மீன்_தகவல்கள்: எண்ணிக்கை_தகவல்கள்_வகை;
   விண்மீன்?: ClientConstellation;
   கிளி?: எண்ணிக்கை_கிளி;
-  நடவடிக்கைகள்: EventEmitter;
+  நடவடிக்கைகள்: TypedEmitter<எண்ணிக்கை_நடவடிக்கைகள்>;
   கிளியை_மறந்துவிடு?: types.schémaFonctionOublier;
 
   constructor({ விண்மீன் }: { விண்மீன்?: ClientConstellation }) {
     this.விண்மீன் = விண்மீன்;
     this.விண்மீன்_தகவல்கள் = {};
-    this.நடவடிக்கைகள் = new EventEmitter();
+    this.நடவடிக்கைகள் = new EventEmitter() as TypedEmitter<எண்ணிக்கை_நடவடிக்கைகள்>;
 
     this._கிளி_தயாரிப்பு();
    
   }
 
-  async கிளியைப்_பெறு(): Promise<எண்ணிக்கை_கிளி> {}
+  async கிளியைப்_பெறு(): Promise<எண்ணிக்கை_கிளி> {
+    return this.கிளி || await new Promise(தீர்வு => this.நடவடிக்கைகள்.once("கிளி தயார்", தீர்வு))
+  }
 
   private async _கிளி_தயாரிப்பு(): Promise<void> {
     if (this.விண்மீன்) {
@@ -53,6 +61,7 @@ export class எண்ணிக்கை {
           this.மாற்றம்_வந்துவிட்டது();
         },
       });
+      this.நடவடிக்கைகள்.emit("கிளி தயார்", this.கிளி)
     }
   }
 
