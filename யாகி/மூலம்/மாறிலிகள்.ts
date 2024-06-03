@@ -1,7 +1,7 @@
 export const அட்டவணை_சாபி = "முறைமைகள்";
 
 // சுற்றுப்பாதை அடையாளங்களை அனைத்தையும் மாற்றவும்
-export const கிளி_குழு_அடையாளம் = 
+export const கிளி_குழு_அடையாளம் =
   "/orbitdb/zdpuB2ZNKMRPnn8kwwL9UDY6VNdXxqxTUiEanjJ4Z6HuxEgWU";
 
 export const எண்ணிக்கை_சிறப்பு_சொல் =
