@@ -150,7 +150,7 @@ export class எண்ணிக்கை {
       const பெட்டியல் = [...முழு]
         .map((இ) => அடிமானங்கள்[இ] || குறிகள்.indexOf(இ))
         .reverse();
-
+      if (பெட்டியல்.some(இ => இ < 0)) throw new Error();
       const படித்தல் = (பெ: number[]): number => {
         const ஆ = பெ[0];
 
