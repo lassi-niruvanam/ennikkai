@@ -276,6 +276,8 @@ export class எண்ணிக்கை {
       if (முழு) {
         for (const அ of முழு) {
           எண் *= அடிமானம்;
+          const இடம் = குறிகள்.indexOf(அ)
+          if (இடம் === -1) throw new Error();
           எண் += குறிகள்.indexOf(அ);
         }
       }
@@ -310,7 +312,8 @@ export class எண்ணிக்கை {
     for (const மொ of மொழிகள்) {
       try {
         const தகவல்_மொழி = this.தகவல்களை_பெறு({ மொழி: மொ });
-        return this.தகவல்களுடன்_எண்ணுக்கு({ உரை, மொழி: மொ, தகவல்_மொழி });
+        const எண் = this.தகவல்களுடன்_எண்ணுக்கு({ உரை, மொழி: மொ, தகவல்_மொழி });
+        if (!isNaN(எண்)) return எண்;
       } catch {
         continue;
       }
