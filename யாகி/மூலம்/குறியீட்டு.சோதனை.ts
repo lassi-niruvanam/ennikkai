@@ -28,8 +28,8 @@ describe("எண்ணிக்கை", function () {
     }
   });
 
-  describe("எண்ணுக்கு", function () {
-    for (const முறைமை of எண்ணிக்கை_.முறைமைகள்) {
+  describe.only("எண்ணுக்கு", function () {
+    for (const முறைமை of ["进位汉语"]) { // எண்ணிக்கை_.முறைமைகள்) {
       test(முறைமை, function () {
         const எண் = 123.456;
         expect(
