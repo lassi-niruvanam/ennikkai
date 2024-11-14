@@ -1,0 +1,32 @@
+name: எண்ணிக்கை யாவாக்கிறிட்டுச் சோதனைகள்
+
+on: [ workflow_call ]
+
+concurrency:
+  group: சோதனைகள்-யாவாக்கிறிட்டு-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sodanaikal:
+    name: கிளிமூக்கு சோதனைகள்
+    runs-on: ubuntu-latest
+    steps:
+      - name: கணு தயாரிப்பு
+        uses: actions/setup-node@v4
+
+      - name: பீயென்பீயெம் நிருவல்
+        uses: pnpm/action-setup@v3.0.0
+        with:
+          version: latest
+
+      - name: குறியீட்டைப் பெற
+        uses: actions/checkout@v4
+
+      - name: நிருவல் செய்ய
+        run: cd யாகி && pnpm install
+
+      - name: சோதனைகள்
+        run: cd பை && pnpm சோதனை
+
+      - name: Codecov
+        uses: codecov/codecov-action@v4

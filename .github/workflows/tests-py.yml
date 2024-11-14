@@ -1,0 +1,47 @@
+name: Tests
+
+on: [ workflow_call ]
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: 'bash'
+
+jobs:
+  test:
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+        os: [macos-latest, ubuntu-latest, windows-latest]
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: கணு தயாரிப்பு
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+
+      - name: பீடியெம் நிருவல்
+        uses: pdm-project/setup-pdm@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: true
+
+      - name: நிருவல்
+        run: cd பை && pdm install
+
+      - name: சோதனைகள்
+        run: cd பை && pdm cov && pdm run coverage xml
+
+      - name: Codecov
+        uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
