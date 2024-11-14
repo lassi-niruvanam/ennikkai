@@ -35,8 +35,8 @@ jobs:
         with:
           node-version: latest
 
-      - name: பீடியெம் நிருவல்
-        uses: pdm-project/setup-pdm@v4
+      - name: பைத்தான் நிருவல்
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
           cache: true
