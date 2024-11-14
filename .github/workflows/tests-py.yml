@@ -1,6 +1,12 @@
 name: Tests
 
-on: [ workflow_call ]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 concurrency:
   group: tests-${{ github.ref }}

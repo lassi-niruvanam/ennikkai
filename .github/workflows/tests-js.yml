@@ -1,6 +1,12 @@
 name: எண்ணிக்கை யாவாக்கிறிட்டுச் சோதனைகள்
 
-on: [ workflow_call ]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 concurrency:
   group: சோதனைகள்-யாவாக்கிறிட்டு-${{ github.ref }}
