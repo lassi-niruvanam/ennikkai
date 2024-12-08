@@ -17,7 +17,7 @@ lassi = { git = "https://github.com/lassi-samaaj/lassi.git", branch = "master" }
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.0.2"
-pytest-subtests = "^0.3.2"
+pytest-subtests = "^0.14.0"
 coverage = {extras = ["toml"], version = "^5.3"}
 pytest-cov = "^2.10.1"
 
