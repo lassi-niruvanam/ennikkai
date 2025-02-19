@@ -1,4 +1,3 @@
-import type { bds, ClientConstellation } from "@constl/ipa";
 import { கிளி } from "@lassi-js/kili";
 
 import {
@@ -20,6 +19,7 @@ import {
   முறைமை_பிரிப்பு_மாறி_குறியீடு,
   கிளி_குழு_அடையாளம்,
 } from "@/மாறிலிகள்.js";
+import type { bds, Constellation } from "@constl/ipa";
 
 const தரவுத்தள_வார்ப்புரு: bds.schémaSpécificationBd = {
   licence: "ODbl-1_0",
@@ -77,7 +77,7 @@ export type எண்ணிக்கை_கிளி = கிளி<முறை
 export const கிளி_தயாரிப்பு = ({
   விண்மீன்,
 }: {
-  விண்மீன்: ClientConstellation;
+  விண்மீன்: Constellation;
 }): எண்ணிக்கை_கிளி => {
   return new கிளி<முறைமை_தகவல்_வரிசை>({
     விண்மீன்: விண்மீன்,

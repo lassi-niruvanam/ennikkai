@@ -1,16 +1,8 @@
-import type { ClientConstellation, types } from "@constl/ipa";
-
-import type {
-  அடிமானம்_எண்_வகை,
-  இடஞ்சார்_எண்_வகை,
-  எண்_வகை,
-  எண்ணிக்கை_தகவல்கள்_வகை,
-} from "@/வகைகள்.js";
-
-import merge from "deepmerge";
 import { EventEmitter } from "events";
+import merge from "deepmerge";
 import TypedEmitter from "typed-emitter";
 
+import { பிணையம்_பரிந்துரை } from "@lassi-js/kili";
 import _தகவல்கள் from "@/தகவல்கள்.json" with { type: "json" };
 import { எண்ணிக்கை_கிளி, கிளி_தயாரிப்பு, முறைமை_தகவல்_வரிசை } from "@/கிளி.js";
 import {
@@ -22,7 +14,13 @@ import {
   முறைமை_பிரிப்பு_நெடுவரிசை_குறியீடு,
   முறைமை_வகை_நெடுவரிசை_குறியீடு,
 } from "@/மாறிலிகள்.js";
-import { பிணையம்_பரிந்துரை } from "@lassi-js/kili";
+import type {
+  அடிமானம்_எண்_வகை,
+  இடஞ்சார்_எண்_வகை,
+  எண்_வகை,
+  எண்ணிக்கை_தகவல்கள்_வகை,
+} from "@/வகைகள்.js";
+import type { Constellation, types } from "@constl/ipa";
 
 type எண்ணிக்கை_நடவடிக்கைகள் = {
   "கிளி தயார்": (கிளி: எண்ணிக்கை_கிளி) => void;
@@ -31,12 +29,12 @@ type எண்ணிக்கை_நடவடிக்கைகள் = {
 
 export class எண்ணிக்கை {
   விண்மீன்_தகவல்கள்: எண்ணிக்கை_தகவல்கள்_வகை;
-  விண்மீன்?: ClientConstellation;
+  விண்மீன்?: Constellation;
   கிளி?: எண்ணிக்கை_கிளி;
   நடவடிக்கைகள்: TypedEmitter<எண்ணிக்கை_நடவடிக்கைகள்>;
   கிளியை_மறந்துவிடு?: types.schémaFonctionOublier;
 
-  constructor({ விண்மீன் }: { விண்மீன்?: ClientConstellation }) {
+  constructor({ விண்மீன் }: { விண்மீன்?: Constellation }) {
     this.விண்மீன் = விண்மீன்;
     this.விண்மீன்_தகவல்கள் = {};
     this.நடவடிக்கைகள் =
@@ -129,8 +127,12 @@ export class எண்ணிக்கை {
     உரை: string;
     தகவல்_மொழி: அடிமானம்_எண்_வகை;
   }): number {
-    if (RegExp(`[${தகவல்_மொழி.குறிகள்}${தகவல்_மொழி.பிரிப்பு || '\.'}]+`, 'g').exec(உரை)?.[0] === உரை) {
-      this.எண்ணுக்கு_அடிமானம்({உரை, தகவல்_மொழி})
+    if (
+      RegExp(`[${தகவல்_மொழி.குறிகள்}${தகவல்_மொழி.பிரிப்பு || "\\."}]+`, "g").exec(
+        உரை,
+      )?.[0] === உரை
+    ) {
+      this.எண்ணுக்கு_அடிமானம்({ உரை, தகவல்_மொழி });
     }
 
     const அடிமானங்கள் = தகவல்_மொழி.அடிமானங்கள்;
@@ -150,7 +152,7 @@ export class எண்ணிக்கை {
       const பெட்டியல் = [...முழு]
         .map((இ) => அடிமானங்கள்[இ] || குறிகள்.indexOf(இ))
         .reverse();
-      if (பெட்டியல்.some(இ => இ < 0)) throw new Error();
+      if (பெட்டியல்.some((இ) => இ < 0)) throw new Error();
       const படித்தல் = (பெ: number[]): number => {
         const ஆ = பெ[0];
 
@@ -276,7 +278,7 @@ export class எண்ணிக்கை {
       if (முழு) {
         for (const அ of முழு) {
           எண் *= அடிமானம்;
-          const இடம் = குறிகள்.indexOf(அ)
+          const இடம் = குறிகள்.indexOf(அ);
           if (இடம் === -1) throw new Error();
           எண் += குறிகள்.indexOf(அ);
         }
