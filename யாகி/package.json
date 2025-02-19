@@ -76,9 +76,6 @@
     "deepmerge": "^4.3.1",
     "events": "^3.3.0"
   },
-  "peerDependencies": {
-    "@constl/ipa": "^1.0.12"
-  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@ipshipyard/node-datachannel",
