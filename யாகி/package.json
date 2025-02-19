@@ -1,6 +1,6 @@
 {
   "name": "ennikkai",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "எண் மொழிபெயர்ப்பு",
   "type": "module",
   "types": "./விநியோகம்/குறியீட்டு.d.ts",
@@ -10,9 +10,9 @@
     "nettoyer": "rimraf விநியோகம்",
     "compiler": "pnpm copierDonnées && pnpm versioner && pnpm nettoyer && pnpm tspc -p tsconfig.build.json",
     "சோதனை": "pnpm copierDonnées && node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
-    "couverture": "pnpm test -- --coverage",
+    "couverture": "pnpm சோதனை -- --coverage",
     "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint மூலம் --fix",
-    "publier": "pnpm test && pnpm compiler && (git commit -a -m 'version' || true) && pnpm publish",
+    "publier": "pnpm சோதனை && pnpm compiler && (git commit -a -m 'version' || true) && pnpm publish",
     "versioner": "pnpm genversion  --es6 --semi மூலம்/பதிப்பு.ts"
   },
   "repository": {
