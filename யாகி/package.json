@@ -9,7 +9,7 @@
     "copierDonnées": "cp ../வளங்கள்/தகவல்கள்.json மூலம்/தகவல்கள்.json",
     "nettoyer": "rimraf விநியோகம்",
     "compiler": "pnpm copierDonnées && pnpm versioner && pnpm nettoyer && pnpm tspc -p tsconfig.build.json",
-    "test": "pnpm copierDonnées && node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
+    "சோதனை": "pnpm copierDonnées && node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
     "couverture": "pnpm test -- --coverage",
     "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint மூலம் --fix",
     "publier": "pnpm test && pnpm compiler && (git commit -a -m 'version' || true) && pnpm publish",
