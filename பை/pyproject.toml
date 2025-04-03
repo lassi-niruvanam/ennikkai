@@ -24,7 +24,7 @@ test = [
 
 [tool.pdm.scripts]
 test = "pdm run pytest சோதனைகள்/மூலம்.py"
-cov = "pdm run coverage run -m pytest"
+cov = "pdm run coverage run -m pytest சோதனைகள்/மூலம்.py"
 
 [tool.pdm.build]
 includes = ["எண்ணிக்கை"]
