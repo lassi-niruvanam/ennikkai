@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@lassi-js/kili':
         specifier: ^0.4.1
-        version: 0.4.1
+        version: 0.4.3
       deepmerge:
         specifier: ^4.3.1
         version: 4.3.1
@@ -856,9 +856,6 @@ packages:
   '@chriscdn/promise-semaphore@2.0.10':
     resolution: {integrity: sha512-NagoHAZEYISDYYprsHe+x2BEcD6GKhTpEreI8BM1qgtHOtCS3lbwRvvTQxzAxU8JVSmw7ep/ROLv3Ng/MPcMHg==}
 
-  '@chriscdn/promise-semaphore@2.0.9':
-    resolution: {integrity: sha512-kKXJcm5gM8FN8O8U20H19/85b8R33K0Q2u5cnm9mfblK/7QcNChlOhCTWgnrr8wYiuF1ZbYIZcioxW79QfjnmQ==}
-
   '@constl/bohr-db@1.2.3':
     resolution: {integrity: sha512-IJXOqeMnJEOqD7DRNMowwPOY7bVKlTdQNu3DNn9zoSKj+fBzTXLzkxl4uRbKLu9vwWzjoXyxgvp2iw7vkt/amQ==}
 
@@ -868,10 +865,6 @@ packages:
 
   '@constl/mandataire@3.0.3':
     resolution: {integrity: sha512-J7zWtq2EOA46EIzAGjiOP/FVYvQrjvxXT7aLyKEA6chm6i/3kJnmv5pgYSF0rofGgzIyRUwsTLuzSB23DoZNyg==}
-
-  '@constl/utils-ipa@1.0.4':
-    resolution: {integrity: sha512-U9GCw5o9ZBJHBy5XK5Rt0rEn30ceSkhhQr6UTylVAF4hJ9ChlNsPKYVdk6KHk+opcwxcdS01RMczHIwEoRzRGg==}
-    engines: {node: '>=20'}
 
   '@constl/utils-ipa@2.0.1':
     resolution: {integrity: sha512-KFIw7bZ8Bxs/vkmLa64u7MZIJFPVk1iNJ/WdwvbvvFrWcAggfuajeZrJrdVGmAPJipdbJ1CKl7AuKd3tXD1wsg==}
@@ -1088,9 +1081,6 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@lassi-js/kili@0.4.1':
-    resolution: {integrity: sha512-wF2vgmLDjZinDqgNdLHZT1HqRvQdtgGc7tSZOZbhEX7WtjzS9KtsI5qLA8CE1BQMmIz9QFReNdNn3gV8eYi6qw==}
-
   '@lassi-js/kili@0.4.3':
     resolution: {integrity: sha512-ijHY8myQZGTAqQrjk+TVJH/dH4npErDIsuylf28prYQYJq1pYnF9FZYDIrs+Hy++hlw4hRLTRer8yX+9bQeQ0g==}
 
@@ -1108,9 +1098,6 @@ packages:
 
   '@libp2p/config@1.1.4':
     resolution: {integrity: sha512-telhYtL8OdRXu0GSgCMtWbZpZy+sQxptU6mmUkZnJLLEAR9CVzRK9W2KzctAon9WSIop7ErKggAaiXeTGMEw8g==}
-
-  '@libp2p/crypto@5.0.11':
-    resolution: {integrity: sha512-1//iAZAO6XKFPwKqX7xCNJFwIgSyLOTE7wVS0gFaD7jWXeYmD78cojFq5QC1jRl04iTJe4COTTNHen/cpqurwA==}
 
   '@libp2p/crypto@5.0.15':
     resolution: {integrity: sha512-28xYMOn3fs8flsNgCVVxp27gEmDTtZHbz+qEVv3v7cWfGRipaVhNXFV9tQJHWXHQ8mN8v/PQvgcfCcWu5jkrTg==}
@@ -1142,9 +1129,6 @@ packages:
   '@libp2p/interface-transport@4.0.3':
     resolution: {integrity: sha512-jXFQ3blhFMEyQbFw/U8Glo3F/fUO5LEaX5HIdeqNpCliK+XnwTfpkcaG+WsJrcApWK4FFyUHc+GGqiWR0hAFFg==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
-
-  '@libp2p/interface@2.5.0':
-    resolution: {integrity: sha512-XKUHsDMbMVwEGgYYj1uB5XCnlFeF21SgyynKbc4sqfVCEJdjxF7ILYX0dm6tjBGjVThubjUd2b82RwOqeds3Kg==}
 
   '@libp2p/interface@2.7.0':
     resolution: {integrity: sha512-lWmfIGzbSaw//yoEWWJh8dXNDGSCwUyXwC7P1Q6jCFWNoEtCaB1pvwOGBtri7Db/aNFZryMzN5covoq5ulldnA==}
@@ -1236,9 +1220,6 @@ packages:
   '@multiformats/multiaddr-to-uri@11.0.0':
     resolution: {integrity: sha512-9RNmlIGwZbBLsHekT50dbt4o4u8Iciw9kGjv+WHiGxQdsJ6xKKjU1+C0Vbas6RilMbaVOAOnEyfNcXbUmTkLxQ==}
 
-  '@multiformats/multiaddr@12.3.5':
-    resolution: {integrity: sha512-f3I7FDd6VM4s3X5dXbmwk8Y99pnvATWj7RorIr+qgeiYCDySp4cwybAFnxdRWeKs6XLPE9meB0p8tK4lQqO8gQ==}
-
   '@multiformats/multiaddr@12.4.0':
     resolution: {integrity: sha512-FL7yBTLijJ5JkO044BGb2msf+uJLrwpD6jD6TkXlbjA9N12+18HT40jvd4o5vL4LOJMc86dPX6tGtk/uI9kYKg==}
 
@@ -1287,10 +1268,6 @@ packages:
 
   '@orbitdb/core-types@1.0.14':
     resolution: {integrity: sha512-Mq+o9zMw8n1kD3eMOQZZ/XG9TnQ8HqUInmduBfMidPXFSQVrvVtTAxyFpHk+2+FMf6BTj1xhrAUCEZlcvYebeQ==}
-
-  '@orbitdb/core@2.4.3':
-    resolution: {integrity: sha512-pRHDJlODTy35nySEAPhTjzZIKQ7eedwCIoplmEXs1rW3KYqMHNQaNxrIc1uBMw9cRsPTeIGwxTUkvXfhhaf35Q==}
-    engines: {node: '>=20.0.0'}
 
   '@orbitdb/core@2.5.0':
     resolution: {integrity: sha512-RE+te/z8MCLhkawby2j9J0T0hH8Mi9BgTUATWd99ih/cyU9OTbbXVuY64A64bdAQ4EZkfJ+OjO9vAMhJHwgnew==}
@@ -1759,10 +1736,6 @@ packages:
 
   asap@2.0.6:
     resolution: {integrity: sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==}
-
-  asn1js@3.0.5:
-    resolution: {integrity: sha512-FVnvrKJwpt9LP2lAMl8qZswRNm3T4q9CON+bxldk2iwk3FFpuwhx2FfinyitizWHsVYyaY+y5JzDR0rCMV5yTQ==}
-    engines: {node: '>=12.0.0'}
 
   asn1js@3.0.6:
     resolution: {integrity: sha512-UOCGPYbl0tv8+006qks/dTgV9ajs97X2p0FAbyS2iyCRrmLSRolDaHdp+v/CLgnzHc3fVB+CwYiUmei7ndFcgA==}
@@ -3940,9 +3913,6 @@ packages:
   multiformats@12.1.3:
     resolution: {integrity: sha512-eajQ/ZH7qXZQR2AgtfpmSMizQzmyYVmCql7pdhldPuYQi4atACekbJaQplk6dWyIi10jCaFnd6pqvcEFXjbaJw==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
-
-  multiformats@13.3.1:
-    resolution: {integrity: sha512-QxowxTNwJ3r5RMctoGA5p13w5RbRT2QDkoM+yFlqfLiioBp78nhDjnRLvmSBI9+KAqN4VdgOVWM9c0CHd86m3g==}
 
   multiformats@13.3.2:
     resolution: {integrity: sha512-qbB0CQDt3QKfiAzZ5ZYjLFOs+zW43vA4uyM8g27PeEuXZybUOFyjrVdP93HPBHMoglibwfkdVwbzfUq8qGcH6g==}
@@ -6400,8 +6370,6 @@ snapshots:
 
   '@chriscdn/promise-semaphore@2.0.10': {}
 
-  '@chriscdn/promise-semaphore@2.0.9': {}
-
   '@constl/bohr-db@1.2.3(react-native@0.74.1(@babel/core@7.26.9)(@babel/preset-env@7.24.5(@babel/core@7.26.9))(react@18.2.0))':
     dependencies:
       '@orbitdb/core': 2.5.0
@@ -6512,20 +6480,6 @@ snapshots:
     dependencies:
       events: 3.3.0
       uuid: 11.1.0
-
-  '@constl/utils-ipa@1.0.4':
-    dependencies:
-      '@chriscdn/promise-semaphore': 2.0.9
-      browser-fs-access: 0.35.0
-      deep-equal: 2.2.3
-      events: 3.3.0
-      genversion: 3.2.0
-      geojson-validation: 1.0.2
-      jszip: 3.10.1
-      multiformats: 13.3.1
-      rimraf: 6.0.1
-      uint8arrays: 5.1.0
-      wherearewe: 2.0.1
 
   '@constl/utils-ipa@2.0.1':
     dependencies:
@@ -6991,12 +6945,6 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lassi-js/kili@0.4.1':
-    dependencies:
-      '@constl/utils-ipa': 1.0.4
-      '@orbitdb/core': 2.4.3
-      deepcopy: 2.1.0
-
   '@lassi-js/kili@0.4.3':
     dependencies:
       '@constl/utils-ipa': 2.0.1
@@ -7056,17 +7004,6 @@ snapshots:
       '@libp2p/keychain': 5.1.4
       '@libp2p/logger': 5.1.13
       interface-datastore: 8.3.1
-
-  '@libp2p/crypto@5.0.11':
-    dependencies:
-      '@libp2p/interface': 2.5.0
-      '@noble/curves': 1.8.1
-      '@noble/hashes': 1.7.1
-      asn1js: 3.0.5
-      multiformats: 13.3.2
-      protons-runtime: 5.5.0
-      uint8arraylist: 2.4.8
-      uint8arrays: 5.1.0
 
   '@libp2p/crypto@5.0.15':
     dependencies:
@@ -7165,15 +7102,6 @@ snapshots:
       it-stream-types: 2.0.2
     transitivePeerDependencies:
       - supports-color
-
-  '@libp2p/interface@2.5.0':
-    dependencies:
-      '@multiformats/multiaddr': 12.3.5
-      it-pushable: 3.2.3
-      it-stream-types: 2.0.2
-      multiformats: 13.3.2
-      progress-events: 1.0.1
-      uint8arraylist: 2.4.8
 
   '@libp2p/interface@2.7.0':
     dependencies:
@@ -7530,15 +7458,6 @@ snapshots:
     dependencies:
       '@multiformats/multiaddr': 12.4.0
 
-  '@multiformats/multiaddr@12.3.5':
-    dependencies:
-      '@chainsafe/is-ip': 2.1.0
-      '@chainsafe/netmask': 2.0.0
-      '@multiformats/dns': 1.0.6
-      multiformats: 13.3.2
-      uint8-varint: 2.0.4
-      uint8arrays: 5.1.0
-
   '@multiformats/multiaddr@12.4.0':
     dependencies:
       '@chainsafe/is-ip': 2.1.0
@@ -7585,18 +7504,6 @@ snapshots:
   '@opentelemetry/api@1.9.0': {}
 
   '@orbitdb/core-types@1.0.14': {}
-
-  '@orbitdb/core@2.4.3':
-    dependencies:
-      '@ipld/dag-cbor': 9.2.2
-      '@libp2p/crypto': 5.0.11
-      it-pipe: 3.0.1
-      level: 8.0.1
-      lru: 3.1.0
-      multiformats: 12.1.3
-      p-queue: 8.1.0
-      timeout-abort-controller: 3.0.0
-      uint8arrays: 5.1.0
 
   '@orbitdb/core@2.5.0':
     dependencies:
@@ -8410,12 +8317,6 @@ snapshots:
 
   asap@2.0.6: {}
 
-  asn1js@3.0.5:
-    dependencies:
-      pvtsutils: 1.3.6
-      pvutils: 1.1.3
-      tslib: 2.8.1
-
   asn1js@3.0.6:
     dependencies:
       pvtsutils: 1.3.6
@@ -9133,7 +9034,7 @@ snapshots:
 
   ennikkai@2.3.4:
     dependencies:
-      '@lassi-js/kili': 0.4.1
+      '@lassi-js/kili': 0.4.3
       deepmerge: 4.3.1
       events: 3.3.0
 
@@ -11239,8 +11140,6 @@ snapshots:
   multiformats@11.0.2: {}
 
   multiformats@12.1.3: {}
-
-  multiformats@13.3.1: {}
 
   multiformats@13.3.2: {}
 
