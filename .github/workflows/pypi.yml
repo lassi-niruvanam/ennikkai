@@ -1,0 +1,26 @@
+name: PyPI
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  publier-pypi:
+    runs-on: ubuntu-latest
+
+    permissions:
+      # IMPORTANT : nécessaire pour la publication automatisée sur PyPI
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Installer PDM
+        uses: pdm-project/setup-pdm@v4
+        with:
+          cache: true
+          cache-dependency-path: |
+            ./பை/pdm.lock
+
+      - name: Publier sur PyPI
+        run: cd பை && pdm publish
