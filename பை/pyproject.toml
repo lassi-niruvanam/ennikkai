@@ -1,6 +1,6 @@
 [project]
 name = "ennikkai"
-version = "1.2.६"
+version = "1.2.6"
 description = "Client Python pour le réseau Constellation."
 authors = [
     {name = "Julien Jean Malard-Adam", email = "julien.malard@mail.mcgill.ca"},
