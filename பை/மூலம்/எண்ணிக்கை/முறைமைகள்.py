@@ -1,6 +1,7 @@
 import json as ஜேஸான்
 import os
 from functools import lru_cache
+from importlib import resources
 
 from nuchabäl import Nuchabäl
 from .அடிமானம் import அடிமானம்
@@ -10,7 +11,7 @@ nchbl = Nuchabäl()
 
 முறைமைகள் = {}
 
-with open(os.path.join(os.path.split(__file__)[0], 'தகவல்கள்.json'), encoding='utf8') as கோ:
+with open(resources.files("எண்ணிக்கை.வளங்கள்").joinpath('தகவல்கள்.json'), encoding='utf8') as கோ:
     தகவல்கள் = ஜேஸான்.load(கோ)
 
 for பெயர், விவரங்கள் in தகவல்கள்.items():

@@ -23,11 +23,14 @@ test = [
 ]
 
 [tool.pdm.scripts]
+sutham = "rm -r -f மூலம்/எண்ணிக்கை/வளங்கள்"
+nagal = "cp -R ../வளங்கள் மூலம்/எண்ணிக்கை"
+togupu = { composite = ["sutham", "nagal"] }
 test = "pdm run pytest சோதனைகள்/மூலம்.py"
 cov = "pdm run coverage run -m pytest சோதனைகள்/மூலம்.py"
 
 [tool.pdm.build]
-includes = ["எண்ணிக்கை"]
+includes = ["மூலம்/எண்ணிக்கை"]
 
 [build-system]
 requires = ["pdm-backend"]
