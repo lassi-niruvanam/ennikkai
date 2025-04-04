@@ -39,7 +39,7 @@ jobs:
             ./பை/pdm.lock
 
       - name: நிருவல்
-        run: cd பை && pdm install
+        run: cd பை && pdm togupu && pdm install
 
       - name: சோதனைகள்
         run: cd பை && pdm cov && pdm run coverage xml
