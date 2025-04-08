@@ -1,26 +1,21 @@
-import json
-from importlib import resources
 from typing import Optional
 
 from nuchabäl import Nuchabäl
 
 from .அடிமானம் import அடிமானம்
 from .இடஞ்சார் import இடஞ்சார்
+from .தகவல்கள்.இயல்புநிலை import இயல்புநிலை_தகவல்கள்
+from .தகவல்கள்.தகவல்கள் import தகவல்_மூலம்
 from .பிழைகள் import மொழிபெயர்ப்புபிழை
-from .புதுப்பிப்பி.புதுப்பிப்பி import புதுப்பிப்பி as புதுப்பிப்பி_வகை
 
 
 class எண்ணிக்கை(object):
-    def __init__(தன், மொழிகள்: Optional[Nuchabäl] = None, புதுப்பிப்பி: Optional[புதுப்பிப்பி_வகை] = None):
-        தகவல்_கோப்பு = resources.files("எண்ணிக்கை.வளங்கள்")
-        with open(தகவல்_கோப்பு.joinpath("தகவல்கள்.json"), encoding='utf8') as கோ:
-            தன்.தகவட்கள் = json.load(கோ)
+    def __init__(தன், மொழிகள்: Optional[Nuchabäl] = None, தகவல்கள்: Optional[தகவல்_மூலம்] = None):
+        தகவல்கள் = தகவல்கள் or இயல்புநிலை_தகவல்கள்()
 
-        தன்.முறைமைகள் = தன்.முறைமைகளை_உருவாக்கு(தன்.தகவட்கள்)
+        தன்.முறைமைகளை_உருவாக்கு(தகவல்கள்.தகவல்களைப்_பெறு())
 
         தன்.nchbl = மொழிகள் or Nuchabäl()
-
-        தன்.புதுப்பிப்பி = புதுப்பிப்பி
 
     def எண்ணுக்கு(தன், உரை: str, மொழி=None) -> int or float:
         முறைமைகள் = தன்.முறைமையைப்_பேறு(மொழி, எல்லாம்=True)
@@ -65,7 +60,7 @@ class எண்ணிக்கை(object):
                 )
             else:
                 raise ValueError(வகை)
-        return முறைமைகள்
+        தன்.முறைமைகள் = முறைமைகள்
 
     def முறைமையைப்_பேறு(தன், மொழி: str, எல்லாம்=False):
         சாத்தியங்கள் = list(தன்.முறைமைகள்.values()) if மொழி is None else []
