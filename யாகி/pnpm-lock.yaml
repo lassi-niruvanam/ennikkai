@@ -20,7 +20,7 @@ importers:
     devDependencies:
       '@constl/ipa':
         specifier: ^1.5.13
-        version: 1.6.16(react-native@0.74.1(@babel/core@7.26.9)(@babel/preset-env@7.24.5(@babel/core@7.26.9))(react@18.2.0))
+        version: 1.6.17(react-native@0.74.1(@babel/core@7.26.9)(@babel/preset-env@7.24.5(@babel/core@7.26.9))(react@18.2.0))
       '@eslint/js':
         specifier: ^9.20.0
         version: 9.26.0
@@ -911,8 +911,8 @@ packages:
   '@constl/bohr-db@1.2.3':
     resolution: {integrity: sha512-IJXOqeMnJEOqD7DRNMowwPOY7bVKlTdQNu3DNn9zoSKj+fBzTXLzkxl4uRbKLu9vwWzjoXyxgvp2iw7vkt/amQ==}
 
-  '@constl/ipa@1.6.16':
-    resolution: {integrity: sha512-JoIaOqmHJ/oudHdpguRzmLwgjyFkDjDcaB4B89Q2XgDDE3jgBn9ie1YZIv1YwYdN6gNKzDdI+Lkw4KETD+ACZA==}
+  '@constl/ipa@1.6.17':
+    resolution: {integrity: sha512-QnKzdFpYG9/wYUoiqSkYGI1F2zo+LCi2eWZFRhIuRuySOPrHMF97XmE1HDK4o4tXmtZjrh1gpSFI/BP/EitvCg==}
     engines: {node: '>=20'}
 
   '@constl/mandataire@3.0.3':
@@ -981,8 +981,8 @@ packages:
   '@helia/block-brokers@4.1.0':
     resolution: {integrity: sha512-pzIhJeDLdF0VFkj9+LeLI6ZZORdH6/FwV7Q+IlIi2m5kAExqaYh8Oob6Dc7J5luu1atf69q4PWNIPYRiySmsmg==}
 
-  '@helia/delegated-routing-v1-http-api-client@4.2.3':
-    resolution: {integrity: sha512-ahHT8xB4WsLK/gPQaU3KN6k9Lm2Qa5sePgebY57o0FbqSOpbgN0a2ckEGNtmAaMwEy0ilGK2Ww3gGX77+6eX+Q==}
+  '@helia/delegated-routing-v1-http-api-client@4.2.5':
+    resolution: {integrity: sha512-fFqVhs7a4TnpKQ1cZ4im3tj53v+8UZLFkQo85otl/GpbIVBmBoGbjkDHGPv4UdjJ2lmYM/cRdnHsYbfjuc5pwA==}
 
   '@helia/interface@5.2.1':
     resolution: {integrity: sha512-8eH3wOoOAHqcux2erXOm33oFBtKdpfHclepzn28bBYEl5wXhrc9JFeo2X3SYJeE0o/jxq0L39BprkYjgSSC91Q==}
@@ -1016,23 +1016,23 @@ packages:
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
 
-  '@ipld/dag-cbor@9.2.2':
-    resolution: {integrity: sha512-uIEOuruCqKTP50OBWwgz4Js2+LhiBQaxc57cnP71f45b1mHEAo1OCR1Zn/TbvSW/mV1x+JqhacIktkKyaYqhCw==}
+  '@ipld/dag-cbor@9.2.3':
+    resolution: {integrity: sha512-x78CdVhtctIMBpwOnzbojsvDy6qNxdeR3RC2W+/fMo2sccqlYkPXbjpmghAVdKx/g0xfHYvSMU8cgCnYvLwRag==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
 
-  '@ipld/dag-json@10.2.3':
-    resolution: {integrity: sha512-itacv1j1hvYgLox2B42Msn70QLzcr0MEo5yGIENuw2SM/lQzq9bmBiMky+kDsIrsqqblKTXcHBZnnmK7D4a6ZQ==}
+  '@ipld/dag-json@10.2.4':
+    resolution: {integrity: sha512-u1Pp4Tqz4r9GHGeLIJUJat5slasSxpBiBlL/i5pmGVEkCnQ1plrp5rQ5e+x3wZaPabxvsirQpfR76TPoGAiXiw==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
 
-  '@ipld/dag-pb@4.1.3':
-    resolution: {integrity: sha512-ueULCaaSCcD+dQga6nKiRr+RSeVgdiYiEPKVUu5iQMNYDN+9osd0KpR3UDd9uQQ+6RWuv9L34SchfEwj7YIbOA==}
+  '@ipld/dag-pb@4.1.4':
+    resolution: {integrity: sha512-v8GLZoFYekDCFpgRgS158S1fkXKWVhF0T6wQJqS+aPyBDewygOjHEUJW7C2cDMw/BNwbMlzzieBwZrt7HWFsyw==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
 
   '@ipshipyard/libp2p-auto-tls@1.0.0':
     resolution: {integrity: sha512-wV1smnqbg3xUCHmPB8KWFuP8G9MKlx8KDuiJvhCWPi7B03xJq2FMybMDPI8tM9boa9sHD+5+NFu+Teo3Lz76fw==}
 
-  '@ipshipyard/node-datachannel@0.26.5':
-    resolution: {integrity: sha512-GOxqgCI4scLTSFwFO7ClK5eDgSCJQgf7mbmJu0qgPu9zNlRp0VJl6rNJScQBllHP7IhmBf3VXRWVvwWfOrplww==}
+  '@ipshipyard/node-datachannel@0.26.6':
+    resolution: {integrity: sha512-70HdhYMyAGXEMuCUq9ATO1Rx/JmiENM5LrGN94KT/q/Et2VsMjJpOWbyFzgodtkQJjDG5saNXTOiQpYZ1AnvEg==}
     engines: {node: '>=18.20.0'}
 
   '@isaacs/cliui@8.0.2':
@@ -1584,9 +1584,6 @@ packages:
   '@types/node@22.15.17':
     resolution: {integrity: sha512-wIX2aSZL5FE+MR0JlvF87BNVrtFWf6AE6rxSE9X7OwnVvoyCQjpzSRJ+M87se/4QCkCiebQAqrJ0y6fwIyi7nw==}
 
-  '@types/node@22.15.3':
-    resolution: {integrity: sha512-lX7HFZeHf4QG/J7tBZqrCAXwz9J5RD56Y6MpP0eJkka8p+K0RY/yBTW7CYFJ4VGCclxqOLKmiGP5juQc6MKgcw==}
-
   '@types/retry@0.12.2':
     resolution: {integrity: sha512-XISRgDJ2Tc5q4TRqvgJtzsRkFYNJzZrhTdtMoGVBttwzzQJkPnS3WWTFc7kuDRoPtPakl+T+OfdEUjYJj7Jbow==}
 
@@ -2131,8 +2128,8 @@ packages:
   caniuse-lite@1.0.30001700:
     resolution: {integrity: sha512-2S6XIXwaE7K7erT8dY+kLQcpa5ms63XlRkMkReXjle+kf6c5g38vyMl+Z5y8dSxOFDhcFe+nxnn261PLxBSQsQ==}
 
-  caniuse-lite@1.0.30001717:
-    resolution: {integrity: sha512-auPpttCq6BDEG8ZAuHJIplGw6GODhjw+/11e7IjpnYCxZcW/ONgPs0KVBJ0d1bY3e2+7PRe5RCLyP+PfwVgkYw==}
+  caniuse-lite@1.0.30001718:
+    resolution: {integrity: sha512-AflseV1ahcSunK53NfEs9gFWgOEmzr0f+kaMFA4xiLZlr9Hzt7HxcSpIFcnNCUkz6R6dWKa54rUz3HUmI3nVcw==}
 
   catering@2.1.1:
     resolution: {integrity: sha512-K7Qy8O9p76sL3/3m7/zLKbRkyOlSZAgzEaLhyj2mXS8PsCud2Eo4hAb8aLtZqHh0QGqLcb9dlJSu6lHRVENm1w==}
@@ -2879,8 +2876,8 @@ packages:
   flow-enums-runtime@0.0.6:
     resolution: {integrity: sha512-3PYnM29RFXwvAN6Pc/scUfkI7RwhQ/xqyLUyPNlXUp9S40zI8nup9tUSrTLSVnWGBN38FNiGWbwZOB6uR4OGdw==}
 
-  flow-parser@0.269.1:
-    resolution: {integrity: sha512-2Yr0kqvT7RwaGL192nT78O5AWJeECQjl0NEzBkMsx8OJt63BvNl5yvSIbE4qZ1VDSjEkhbUgaWYdwX354bVNjw==}
+  flow-parser@0.270.0:
+    resolution: {integrity: sha512-WjU6NZjaENlHjiO6eGyfAbuk0OC5XkKoN+XCY2g1nDDW230smGGxI9Ltp0qJdj0+ae2MrO1fwwn3vOupv9R+Xw==}
     engines: {node: '>=0.4.0'}
 
   follow-redirects@1.15.9:
@@ -3165,8 +3162,8 @@ packages:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
 
-  idb@8.0.2:
-    resolution: {integrity: sha512-CX70rYhx7GDDQzwwQMDwF6kDRQi5vVs6khHUumDrMecBylKkwvZ8HWvKV08AGb7VbpoGCWUQ4aHzNDgoUiOIUg==}
+  idb@8.0.3:
+    resolution: {integrity: sha512-LtwtVyVYO5BqRvcsKuB2iUMnHwPVByPCXFXOpuU96IZPPoPN6xjOGxZQ74pgSVVLQWtUOYgyeL4GE98BY5D3wg==}
 
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
@@ -3593,8 +3590,8 @@ packages:
   it-parallel-batch@3.0.7:
     resolution: {integrity: sha512-R/YKQMefUwLYfJ2UxMaxQUf+Zu9TM+X1KFDe4UaSQlcNog6AbMNMBt3w1suvLEjDDMrI9FNrlopVumfBIboeOg==}
 
-  it-parallel@3.0.9:
-    resolution: {integrity: sha512-FSg8T+pr7Z1VUuBxEzAAp/K1j8r1e9mOcyzpWMxN3mt33WFhroFjWXV1oYSSjNqcdYwxD/XgydMVMktJvKiDog==}
+  it-parallel@3.0.10:
+    resolution: {integrity: sha512-wBRll/TrkgQlAK711TI/f1GJLw/7W1Oxc/zLeNpKUzgEZGBoF5d9nM4Z3w8E0GLWrk0c6dkO4UV9ojlE5jBZcA==}
 
   it-peekable@3.0.6:
     resolution: {integrity: sha512-odk9wn8AwFQipy8+tFaZNRCM62riraKZJRysfbmOett9wgJumCwgZFzWUBUwMoiQapEcEVGwjDpMChZIi+zLuQ==}
@@ -4169,6 +4166,9 @@ packages:
 
   multiformats@13.3.2:
     resolution: {integrity: sha512-qbB0CQDt3QKfiAzZ5ZYjLFOs+zW43vA4uyM8g27PeEuXZybUOFyjrVdP93HPBHMoglibwfkdVwbzfUq8qGcH6g==}
+
+  multiformats@13.3.3:
+    resolution: {integrity: sha512-TlaFCzs3NHNzMpwiGwRYehnnhHlZcWfptygFekshlb9xCyO09GfN+9881+VBENCdRnKOeqmMxDCbupNecV8xRQ==}
 
   murmurhash3js-revisited@3.0.0:
     resolution: {integrity: sha512-/sF3ee6zvScXMb1XFJ8gDsSnY+X8PbOyjIuBhtgis10W2Jx4ZjIhikUCIF9c4gpJxVnQIsPAFrSwTCuAjicP6g==}
@@ -6687,7 +6687,7 @@ snapshots:
       it-length-prefixed: 9.1.1
       it-pipe: 3.0.1
       it-pushable: 3.2.3
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       protons-runtime: 5.5.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -6745,7 +6745,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@constl/ipa@1.6.16(react-native@0.74.1(@babel/core@7.26.9)(@babel/preset-env@7.24.5(@babel/core@7.26.9))(react@18.2.0))':
+  '@constl/ipa@1.6.17(react-native@0.74.1(@babel/core@7.26.9)(@babel/preset-env@7.24.5(@babel/core@7.26.9))(react@18.2.0))':
     dependencies:
       '@chainsafe/libp2p-gossipsub': 14.1.1
       '@chainsafe/libp2p-noise': 16.1.3
@@ -6756,7 +6756,7 @@ snapshots:
       '@constl/utils-ipa': 2.0.2
       '@helia/block-brokers': 4.1.0
       '@helia/unixfs': 4.0.3
-      '@ipld/dag-cbor': 9.2.2
+      '@ipld/dag-cbor': 9.2.3
       '@lassi-js/kili': 0.4.4
       '@libp2p/autonat': 2.0.30
       '@libp2p/bootstrap': 11.0.35
@@ -6813,7 +6813,7 @@ snapshots:
       libp2p: 2.8.5
       lodash-es: 4.17.21
       merge-options: 3.0.4
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       p-queue: 8.1.0
       p-retry: 6.2.1
       platform: 1.3.6
@@ -6938,7 +6938,7 @@ snapshots:
       it-map: 3.1.2
       it-pipe: 3.0.1
       it-take: 3.0.7
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       p-defer: 4.0.1
       progress-events: 1.0.1
       protons-runtime: 5.5.0
@@ -6959,10 +6959,10 @@ snapshots:
       '@multiformats/multiaddr-to-uri': 11.0.0
       interface-blockstore: 5.3.1
       interface-store: 6.0.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       progress-events: 1.0.1
 
-  '@helia/delegated-routing-v1-http-api-client@4.2.3':
+  '@helia/delegated-routing-v1-http-api-client@4.2.5':
     dependencies:
       '@libp2p/interface': 2.9.0
       '@libp2p/logger': 5.1.15
@@ -6974,7 +6974,7 @@ snapshots:
       it-first: 3.0.7
       it-map: 3.1.2
       it-ndjson: 1.1.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       p-defer: 4.0.1
       p-queue: 8.1.0
       uint8arrays: 5.1.0
@@ -6986,12 +6986,12 @@ snapshots:
       interface-blockstore: 5.3.1
       interface-datastore: 8.3.1
       interface-store: 6.0.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       progress-events: 1.0.1
 
   '@helia/routers@3.0.1':
     dependencies:
-      '@helia/delegated-routing-v1-http-api-client': 4.2.3
+      '@helia/delegated-routing-v1-http-api-client': 4.2.5
       '@helia/interface': 5.2.1
       '@libp2p/interface': 2.9.0
       '@libp2p/peer-id': 5.1.2
@@ -6999,13 +6999,13 @@ snapshots:
       ipns: 10.0.2
       it-first: 3.0.7
       it-map: 3.1.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       uint8arrays: 5.1.0
 
   '@helia/unixfs@4.0.3':
     dependencies:
       '@helia/interface': 5.2.1
-      '@ipld/dag-pb': 4.1.3
+      '@ipld/dag-pb': 4.1.4
       '@libp2p/interface': 2.9.0
       '@libp2p/logger': 5.1.15
       '@multiformats/murmur3': 2.1.8
@@ -7019,7 +7019,7 @@ snapshots:
       it-last: 3.0.7
       it-pipe: 3.0.1
       merge-options: 3.0.4
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       progress-events: 1.0.1
       sparse-array: 1.3.2
       uint8arrays: 5.1.0
@@ -7030,9 +7030,9 @@ snapshots:
   '@helia/utils@1.2.2':
     dependencies:
       '@helia/interface': 5.2.1
-      '@ipld/dag-cbor': 9.2.2
-      '@ipld/dag-json': 10.2.3
-      '@ipld/dag-pb': 4.1.3
+      '@ipld/dag-cbor': 9.2.3
+      '@ipld/dag-json': 10.2.4
+      '@ipld/dag-pb': 4.1.4
       '@libp2p/interface': 2.9.0
       '@libp2p/logger': 5.1.15
       '@libp2p/utils': 6.6.2
@@ -7048,7 +7048,7 @@ snapshots:
       it-foreach: 2.1.2
       it-merge: 3.0.9
       mortice: 3.0.6
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       p-defer: 4.0.1
       progress-events: 1.0.1
       uint8arrays: 5.1.0
@@ -7066,19 +7066,19 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.2': {}
 
-  '@ipld/dag-cbor@9.2.2':
+  '@ipld/dag-cbor@9.2.3':
     dependencies:
       cborg: 4.2.10
-      multiformats: 13.3.2
+      multiformats: 13.3.3
 
-  '@ipld/dag-json@10.2.3':
+  '@ipld/dag-json@10.2.4':
     dependencies:
       cborg: 4.2.10
-      multiformats: 13.3.2
+      multiformats: 13.3.3
 
-  '@ipld/dag-pb@4.1.3':
+  '@ipld/dag-pb@4.1.4':
     dependencies:
-      multiformats: 13.3.2
+      multiformats: 13.3.3
 
   '@ipshipyard/libp2p-auto-tls@1.0.0':
     dependencies:
@@ -7096,12 +7096,12 @@ snapshots:
       any-signal: 4.1.1
       delay: 6.0.0
       interface-datastore: 8.3.1
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       uint8arrays: 5.1.0
     transitivePeerDependencies:
       - supports-color
 
-  '@ipshipyard/node-datachannel@0.26.5':
+  '@ipshipyard/node-datachannel@0.26.6':
     dependencies:
       prebuild-install: 7.1.3
 
@@ -7340,7 +7340,7 @@ snapshots:
       '@multiformats/multiaddr': 12.4.0
       any-signal: 4.1.1
       it-protobuf-stream: 2.0.1
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       protons-runtime: 5.5.0
       uint8arraylist: 2.4.8
 
@@ -7366,7 +7366,7 @@ snapshots:
       any-signal: 4.1.1
       it-protobuf-stream: 2.0.1
       it-stream-types: 2.0.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       nanoid: 5.1.5
       progress-events: 1.0.1
       protons-runtime: 5.5.0
@@ -7387,7 +7387,7 @@ snapshots:
       '@libp2p/interface': 2.9.0
       '@noble/curves': 1.9.0
       '@noble/hashes': 1.8.0
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       protons-runtime: 5.5.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -7432,7 +7432,7 @@ snapshots:
       '@multiformats/multiaddr': 12.4.0
       '@multiformats/multiaddr-matcher': 1.7.0
       it-drain: 3.0.8
-      it-parallel: 3.0.9
+      it-parallel: 3.0.10
       it-protobuf-stream: 2.0.1
       protons-runtime: 5.5.0
       uint8arraylist: 2.4.8
@@ -7485,7 +7485,7 @@ snapshots:
       '@multiformats/multiaddr': 12.4.0
       it-pushable: 3.2.3
       it-stream-types: 2.0.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       progress-events: 1.0.1
       uint8arraylist: 2.4.8
 
@@ -7509,12 +7509,12 @@ snapshots:
       it-length-prefixed: 10.0.1
       it-map: 3.1.2
       it-merge: 3.0.9
-      it-parallel: 3.0.9
+      it-parallel: 3.0.10
       it-pipe: 3.0.1
       it-protobuf-stream: 1.1.6
       it-take: 3.0.7
       mortice: 3.0.6
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       p-defer: 4.0.1
       p-event: 6.0.1
       progress-events: 1.0.1
@@ -7532,7 +7532,7 @@ snapshots:
       asn1js: 3.0.6
       interface-datastore: 8.3.1
       merge-options: 3.0.4
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       sanitize-filename: 1.6.3
       uint8arrays: 5.1.0
 
@@ -7551,7 +7551,7 @@ snapshots:
       '@libp2p/interface': 2.9.0
       '@multiformats/multiaddr': 12.4.0
       interface-datastore: 8.3.1
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       weald: 1.0.4
 
   '@libp2p/mdns@11.0.35':
@@ -7593,13 +7593,13 @@ snapshots:
       '@libp2p/interface': 2.9.0
       '@libp2p/peer-id': 5.1.2
       '@libp2p/utils': 6.6.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
 
   '@libp2p/peer-id@5.1.2':
     dependencies:
       '@libp2p/crypto': 5.1.1
       '@libp2p/interface': 2.9.0
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       uint8arrays: 5.1.0
 
   '@libp2p/peer-record@8.0.27':
@@ -7609,7 +7609,7 @@ snapshots:
       '@libp2p/peer-id': 5.1.2
       '@libp2p/utils': 6.6.2
       '@multiformats/multiaddr': 12.4.0
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       protons-runtime: 5.5.0
       uint8-varint: 2.0.4
       uint8arraylist: 2.4.8
@@ -7625,7 +7625,7 @@ snapshots:
       interface-datastore: 8.3.1
       it-all: 3.0.7
       mortice: 3.0.6
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       protons-runtime: 5.5.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -7661,7 +7661,7 @@ snapshots:
       it-length-prefixed: 10.0.1
       it-pipe: 3.0.1
       it-pushable: 3.2.3
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       p-queue: 8.1.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -7741,7 +7741,7 @@ snapshots:
     dependencies:
       '@chainsafe/is-ip': 2.1.0
       '@chainsafe/libp2p-noise': 16.1.3
-      '@ipshipyard/node-datachannel': 0.26.5
+      '@ipshipyard/node-datachannel': 0.26.6
       '@libp2p/crypto': 5.1.1
       '@libp2p/interface': 2.9.0
       '@libp2p/interface-internal': 2.3.11
@@ -7760,7 +7760,7 @@ snapshots:
       it-protobuf-stream: 2.0.1
       it-pushable: 3.2.3
       it-stream-types: 2.0.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       p-defer: 4.0.1
       p-timeout: 6.1.4
       p-wait-for: 5.0.2
@@ -7803,7 +7803,7 @@ snapshots:
       '@multiformats/multiaddr': 12.4.0
       '@multiformats/multiaddr-matcher': 1.7.0
       it-stream-types: 2.0.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       progress-events: 1.0.1
       race-signal: 1.1.3
       uint8arraylist: 2.4.8
@@ -7847,7 +7847,7 @@ snapshots:
     dependencies:
       '@chainsafe/is-ip': 2.1.0
       '@multiformats/multiaddr': 12.4.0
-      multiformats: 13.3.2
+      multiformats: 13.3.3
 
   '@multiformats/multiaddr-to-uri@11.0.0':
     dependencies:
@@ -7858,13 +7858,13 @@ snapshots:
       '@chainsafe/is-ip': 2.1.0
       '@chainsafe/netmask': 2.0.0
       '@multiformats/dns': 1.0.6
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       uint8-varint: 2.0.4
       uint8arrays: 5.1.0
 
   '@multiformats/murmur3@2.1.8':
     dependencies:
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       murmurhash3js-revisited: 3.0.0
 
   '@multiformats/uri-to-multiaddr@8.1.0':
@@ -7907,7 +7907,7 @@ snapshots:
 
   '@orbitdb/core@2.5.0':
     dependencies:
-      '@ipld/dag-cbor': 9.2.2
+      '@ipld/dag-cbor': 9.2.3
       '@libp2p/crypto': 5.1.1
       it-pipe: 3.0.1
       level: 8.0.1
@@ -8396,7 +8396,7 @@ snapshots:
 
   '@types/dns-packet@5.6.5':
     dependencies:
-      '@types/node': 22.15.3
+      '@types/node': 22.15.17
 
   '@types/estree@1.0.7': {}
 
@@ -8433,7 +8433,7 @@ snapshots:
   '@types/multicast-dns@7.2.4':
     dependencies:
       '@types/dns-packet': 5.6.5
-      '@types/node': 22.15.3
+      '@types/node': 22.15.17
 
   '@types/node-forge@1.3.11':
     dependencies:
@@ -8455,10 +8455,6 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@22.15.3':
-    dependencies:
-      undici-types: 6.21.0
-
   '@types/retry@0.12.2': {}
 
   '@types/sinon@17.0.4':
@@ -8471,7 +8467,7 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 22.15.3
+      '@types/node': 22.15.17
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -8778,7 +8774,7 @@ snapshots:
       define-properties: 1.2.1
       es-abstract: 1.23.9
       es-errors: 1.3.0
-      get-intrinsic: 1.3.0
+      get-intrinsic: 1.2.7
       is-array-buffer: 3.0.5
 
   asap@2.0.6: {}
@@ -8957,7 +8953,7 @@ snapshots:
       it-filter: 3.1.2
       it-merge: 3.0.9
       it-pushable: 3.2.3
-      multiformats: 13.3.2
+      multiformats: 13.3.3
 
   blockstore-fs@2.0.2:
     dependencies:
@@ -8966,16 +8962,16 @@ snapshots:
       it-glob: 3.0.2
       it-map: 3.1.2
       it-parallel-batch: 3.0.7
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       steno: 4.0.2
 
   blockstore-idb@2.0.1:
     dependencies:
       blockstore-core: 5.0.2
-      idb: 8.0.2
+      idb: 8.0.3
       interface-blockstore: 5.3.1
       interface-store: 6.0.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
 
   body-parser@2.2.0:
     dependencies:
@@ -9039,7 +9035,7 @@ snapshots:
 
   browserslist@4.24.5:
     dependencies:
-      caniuse-lite: 1.0.30001717
+      caniuse-lite: 1.0.30001718
       electron-to-chromium: 1.5.152
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.5)
@@ -9124,7 +9120,7 @@ snapshots:
 
   caniuse-lite@1.0.30001700: {}
 
-  caniuse-lite@1.0.30001717: {}
+  caniuse-lite@1.0.30001718: {}
 
   catering@2.1.1: {}
 
@@ -9375,7 +9371,7 @@ snapshots:
   datastore-idb@3.0.1:
     dependencies:
       datastore-core: 10.0.2
-      idb: 8.0.2
+      idb: 8.0.3
       interface-datastore: 8.3.1
       interface-store: 6.0.2
       it-filter: 3.1.2
@@ -9574,7 +9570,7 @@ snapshots:
       es-set-tostringtag: 2.1.0
       es-to-primitive: 1.3.0
       function.prototype.name: 1.1.8
-      get-intrinsic: 1.3.0
+      get-intrinsic: 1.2.7
       get-proto: 1.0.1
       get-symbol-description: 1.1.0
       globalthis: 1.0.4
@@ -10028,7 +10024,7 @@ snapshots:
 
   flow-enums-runtime@0.0.6: {}
 
-  flow-parser@0.269.1: {}
+  flow-parser@0.270.0: {}
 
   follow-redirects@1.15.9(debug@4.4.0):
     optionalDependencies:
@@ -10147,7 +10143,7 @@ snapshots:
     dependencies:
       call-bound: 1.0.3
       es-errors: 1.3.0
-      get-intrinsic: 1.3.0
+      get-intrinsic: 1.2.7
 
   get-tsconfig@4.10.0:
     dependencies:
@@ -10279,7 +10275,7 @@ snapshots:
       '@chainsafe/libp2p-noise': 16.1.3
       '@chainsafe/libp2p-yamux': 7.0.1
       '@helia/block-brokers': 4.1.0
-      '@helia/delegated-routing-v1-http-api-client': 4.2.3
+      '@helia/delegated-routing-v1-http-api-client': 4.2.5
       '@helia/interface': 5.2.1
       '@helia/routers': 3.0.1
       '@helia/utils': 1.2.2
@@ -10308,7 +10304,7 @@ snapshots:
       interface-datastore: 8.3.1
       ipns: 10.0.2
       libp2p: 2.8.5
-      multiformats: 13.3.2
+      multiformats: 13.3.3
     transitivePeerDependencies:
       - bufferutil
       - react-native
@@ -10354,7 +10350,7 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  idb@8.0.2: {}
+  idb@8.0.3: {}
 
   ieee754@1.2.1: {}
 
@@ -10403,7 +10399,7 @@ snapshots:
   interface-blockstore@5.3.1:
     dependencies:
       interface-store: 6.0.2
-      multiformats: 13.3.2
+      multiformats: 13.3.3
 
   interface-datastore@8.3.1:
     dependencies:
@@ -10428,9 +10424,9 @@ snapshots:
 
   ipfs-unixfs-exporter@13.6.2:
     dependencies:
-      '@ipld/dag-cbor': 9.2.2
-      '@ipld/dag-json': 10.2.3
-      '@ipld/dag-pb': 4.1.3
+      '@ipld/dag-cbor': 9.2.3
+      '@ipld/dag-json': 10.2.4
+      '@ipld/dag-pb': 4.1.4
       '@multiformats/murmur3': 2.1.8
       hamt-sharding: 3.0.6
       interface-blockstore: 5.3.1
@@ -10438,16 +10434,16 @@ snapshots:
       it-filter: 3.1.2
       it-last: 3.0.7
       it-map: 3.1.2
-      it-parallel: 3.0.9
+      it-parallel: 3.0.10
       it-pipe: 3.0.1
       it-pushable: 3.2.3
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       p-queue: 8.1.0
       progress-events: 1.0.1
 
   ipfs-unixfs-importer@15.3.2:
     dependencies:
-      '@ipld/dag-pb': 4.1.3
+      '@ipld/dag-pb': 4.1.4
       '@multiformats/murmur3': 2.1.8
       hamt-sharding: 3.0.6
       interface-blockstore: 5.3.1
@@ -10457,7 +10453,7 @@ snapshots:
       it-batch: 3.0.7
       it-first: 3.0.7
       it-parallel-batch: 3.0.7
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       progress-events: 1.0.1
       rabin-wasm: 0.1.5
       uint8arraylist: 2.4.8
@@ -10478,7 +10474,7 @@ snapshots:
       '@libp2p/logger': 5.1.15
       cborg: 4.2.10
       interface-datastore: 8.3.1
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       protons-runtime: 5.5.0
       timestamp-nano: 1.0.1
       uint8arraylist: 2.4.8
@@ -10539,7 +10535,7 @@ snapshots:
   is-data-view@1.0.2:
     dependencies:
       call-bound: 1.0.3
-      get-intrinsic: 1.3.0
+      get-intrinsic: 1.2.7
       is-typed-array: 1.1.15
 
   is-date-object@1.1.0:
@@ -10828,7 +10824,7 @@ snapshots:
     dependencies:
       it-batch: 3.0.7
 
-  it-parallel@3.0.9:
+  it-parallel@3.0.10:
     dependencies:
       p-defer: 4.0.1
 
@@ -11252,7 +11248,7 @@ snapshots:
       '@babel/register': 7.27.1(@babel/core@7.26.9)
       babel-core: 7.0.0-bridge.0(@babel/core@7.26.9)
       chalk: 4.1.2
-      flow-parser: 0.269.1
+      flow-parser: 0.270.0
       graceful-fs: 4.2.11
       micromatch: 4.0.8
       neo-async: 2.6.2
@@ -11353,9 +11349,9 @@ snapshots:
       interface-datastore: 8.3.1
       it-byte-stream: 2.0.1
       it-merge: 3.0.9
-      it-parallel: 3.0.9
+      it-parallel: 3.0.10
       merge-options: 3.0.4
-      multiformats: 13.3.2
+      multiformats: 13.3.3
       p-defer: 4.0.1
       p-retry: 6.2.1
       progress-events: 1.0.1
@@ -11744,6 +11740,8 @@ snapshots:
 
   multiformats@13.3.2: {}
 
+  multiformats@13.3.3: {}
+
   murmurhash3js-revisited@3.0.0: {}
 
   nanoid@5.1.5: {}
@@ -11926,7 +11924,7 @@ snapshots:
 
   own-keys@1.0.1:
     dependencies:
-      get-intrinsic: 1.3.0
+      get-intrinsic: 1.2.7
       object-keys: 1.1.1
       safe-push-apply: 1.0.0
 
@@ -12297,7 +12295,7 @@ snapshots:
       es-abstract: 1.23.9
       es-errors: 1.3.0
       es-object-atoms: 1.1.1
-      get-intrinsic: 1.3.0
+      get-intrinsic: 1.2.7
       get-proto: 1.0.1
       which-builtin-type: 1.2.1
 
@@ -12425,7 +12423,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.8
       call-bound: 1.0.3
-      get-intrinsic: 1.3.0
+      get-intrinsic: 1.2.7
       has-symbols: 1.1.0
       isarray: 2.0.5
 
@@ -13067,7 +13065,7 @@ snapshots:
 
   uint8arrays@5.1.0:
     dependencies:
-      multiformats: 13.3.2
+      multiformats: 13.3.3
 
   unbox-primitive@1.1.0:
     dependencies:
