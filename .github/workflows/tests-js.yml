@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: கணு தயாரிப்பு
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
 
       - name: பீயென்பீயெம் நிருவல்
         uses: pnpm/action-setup@v4.2.0
