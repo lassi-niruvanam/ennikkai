@@ -56,7 +56,7 @@ importers:
         version: 30.2.0(@types/node@24.5.2)
       prettier:
         specifier: ^3.5.1
-        version: 3.7.3
+        version: 3.7.4
       rimraf:
         specifier: ^6.0.1
         version: 6.1.2
@@ -3070,8 +3070,8 @@ packages:
   flow-enums-runtime@0.0.6:
     resolution: {integrity: sha512-3PYnM29RFXwvAN6Pc/scUfkI7RwhQ/xqyLUyPNlXUp9S40zI8nup9tUSrTLSVnWGBN38FNiGWbwZOB6uR4OGdw==}
 
-  flow-parser@0.291.0:
-    resolution: {integrity: sha512-MLqjFn72Dvndqrkjy280HaIs4AV9Z6nxVRmNPO3TjbYcipg4hR7QX7tEYZYsVvaaZWZPGe6Mithluk2aPGlDOw==}
+  flow-parser@0.292.0:
+    resolution: {integrity: sha512-H7TRIkLYQucAszvp1DhsUMGrlu0ImgKV7eBLQ/wiOqQGDzsllBCWGgaPyw/n1CAw615VRCcRYf6TCYIpemenzw==}
     engines: {node: '>=0.4.0'}
 
   follow-redirects@1.15.9:
@@ -4464,8 +4464,8 @@ packages:
     resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==}
     engines: {node: '>= 6.13.0'}
 
-  node-forge@1.3.2:
-    resolution: {integrity: sha512-6xKiQ+cph9KImrRh0VsjH2d8/GXA4FIMlgU4B757iI1ApvcyA9VlouP0yZJha01V+huImO+kKMU7ih+2+E14fw==}
+  node-forge@1.3.3:
+    resolution: {integrity: sha512-rLvcdSyRCyouf6jcOIPe/BgwG/d7hKjzMKOas33/pHEr6gbq18IK9zV7DiPvzsz0oBJPme6qr6H6kGZuI9/DZg==}
     engines: {node: '>= 6.13.0'}
 
   node-gyp-build@4.8.4:
@@ -4757,8 +4757,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.7.3:
-    resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
+  prettier@3.7.4:
+    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -10466,7 +10466,7 @@ snapshots:
 
   flow-enums-runtime@0.0.6: {}
 
-  flow-parser@0.291.0: {}
+  flow-parser@0.292.0: {}
 
   follow-redirects@1.15.9(debug@4.4.3):
     optionalDependencies:
@@ -11779,7 +11779,7 @@ snapshots:
       '@babel/register': 7.28.3(@babel/core@7.28.4)
       babel-core: 7.0.0-bridge.0(@babel/core@7.28.4)
       chalk: 4.1.2
-      flow-parser: 0.291.0
+      flow-parser: 0.292.0
       graceful-fs: 4.2.11
       micromatch: 4.0.8
       neo-async: 2.6.2
@@ -12320,7 +12320,7 @@ snapshots:
 
   node-forge@1.3.1: {}
 
-  node-forge@1.3.2: {}
+  node-forge@1.3.3: {}
 
   node-gyp-build@4.8.4: {}
 
@@ -12600,7 +12600,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.7.3: {}
+  prettier@3.7.4: {}
 
   pretty-format@26.6.2:
     dependencies:
@@ -12976,7 +12976,7 @@ snapshots:
   selfsigned@2.4.1:
     dependencies:
       '@types/node-forge': 1.3.14
-      node-forge: 1.3.2
+      node-forge: 1.3.3
 
   semver@5.7.2: {}
 
