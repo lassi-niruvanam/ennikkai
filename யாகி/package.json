@@ -29,28 +29,27 @@
   },
   "homepage": "https://github.com/julienmalard/ennikkai#readme",
   "devDependencies": {
-    "@constl/ipa": "^1.5.13",
-    "@eslint/js": "^10.0.0",
+    "@constl/ipa": "^1.6.24",
+    "@eslint/js": "^10.0.1",
     "@types/jest": "^30.0.0",
-    "@typescript-eslint/eslint-plugin": "^8.24.1",
-    "@typescript-eslint/parser": "^8.24.1",
-    "eslint": "^10.0.0",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-import-resolver-typescript": "^4.0.0",
-    "eslint-plugin-import": "^2.31.0",
+    "@typescript-eslint/eslint-plugin": "^8.68.0",
+    "@typescript-eslint/parser": "^8.68.0",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import": "^2.32.0",
     "genversion": "^3.2.0",
-    "globals": "^17.0.0",
-    "jest": "^30.0.0",
-    "prettier": "^3.5.1",
-    "rimraf": "^6.0.1",
-    "ts-jest": "^29.2.5",
-    "ts-patch": "^4.0.0",
+    "globals": "^17.11.0",
+    "jest": "^30.4.2",
+    "prettier": "^3.9.6",
+    "rimraf": "^6.1.3",
+    "ts-jest": "^29.4.12",
+    "ts-patch": "^4.0.1",
     "tsconfig-paths": "^4.2.0",
     "tscpaths": "^0.0.9",
-    "typed-emitter": "^2.1.0",
-    "typescript": "^5.7.3",
-    "typescript-eslint": "^8.24.1",
-    "typescript-transform-paths": "^3.5.3"
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.68.0",
+    "typescript-transform-paths": "^4.0.0"
   },
   "jest": {
     "transform": {
@@ -73,7 +72,8 @@
   },
   "dependencies": {
     "deepmerge": "^4.3.1",
-    "events": "^3.3.0"
+    "events": "^3.3.0",
+    "tiny-typed-emitter": "^2.1.0"
   },
   "peerDependencies": {
     "@lassi-js/kili": "^0.4.1"

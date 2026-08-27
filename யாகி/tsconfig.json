@@ -1,21 +1,22 @@
 {
   "compilerOptions": {
     "allowJs": false,
-    "baseUrl": ".",
     "declaration": true,
     "esModuleInterop": true,
     "incremental": true,
     "importHelpers": true,
+    "isolatedModules": true,
     "jsx": "react",
     "lib": ["dom", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "paths": {
-      "@/*": ["மூலம்/*"]
+      "@/*": ["./மூலம்/*"]
     },
     "outDir": "./விநியோகம்",
+    "rootDir": "./மூலம்",
     "sourceMap": true,
     "strict": true,
     "strictPropertyInitialization": true,

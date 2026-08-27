@@ -1,6 +1,6 @@
 import { EventEmitter } from "events";
 import merge from "deepmerge";
-import TypedEmitter from "typed-emitter";
+import { TypedEmitter } from "tiny-typed-emitter";
 
 import type { பிணையம்_பரிந்துரை } from "@lassi-js/kili";
 import _தகவல்கள் from "@/தகவல்கள்.json" with { type: "json" };
