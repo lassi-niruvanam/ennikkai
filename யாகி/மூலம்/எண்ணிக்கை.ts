@@ -2,7 +2,7 @@ import { EventEmitter } from "events";
 import merge from "deepmerge";
 import TypedEmitter from "typed-emitter";
 
-import { பிணையம்_பரிந்துரை } from "@lassi-js/kili";
+import type { பிணையம்_பரிந்துரை } from "@lassi-js/kili";
 import _தகவல்கள் from "@/தகவல்கள்.json" with { type: "json" };
 import { எண்ணிக்கை_கிளி, கிளி_தயாரிப்பு, முறைமை_தகவல்_வரிசை } from "@/கிளி.js";
 import {
@@ -54,7 +54,7 @@ export class எண்ணிக்கை {
 
   private async _கிளி_தயாரிப்பு(): Promise<void> {
     if (this.விண்மீன்) {
-      this.கிளி = கிளி_தயாரிப்பு({
+      this.கிளி = await கிளி_தயாரிப்பு({
         விண்மீன்: this.விண்மீன்,
       });
       this.கிளியை_மறந்துவிடு =

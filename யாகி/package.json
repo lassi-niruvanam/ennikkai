@@ -1,6 +1,6 @@
 {
   "name": "ennikkai",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "description": "எண் மொழிபெயர்ப்பு",
   "type": "module",
   "types": "./விநியோகம்/குறியீட்டு.d.ts",
@@ -72,20 +72,15 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@lassi-js/kili": "^0.4.1",
     "deepmerge": "^4.3.1",
     "events": "^3.3.0"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@ipshipyard/node-datachannel",
-      "@localfirst/auth",
-      "@localfirst/crdx",
-      "@localfirst/crypto",
-      "@localfirst/shared",
-      "classic-level",
-      "iso-constants",
-      "msgpackr-extract"
-    ]
+  "peerDependencies": {
+    "@lassi-js/kili": "^0.4.1"
+  },
+  "peerDependenciesMeta": {
+    "@lassi-js/kili": {
+      "optional": true
+    }
   }
 }

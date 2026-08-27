@@ -1,0 +1,7 @@
+allowBuilds:
+  '@ipshipyard/node-datachannel': false
+  aws-sdk: false
+  classic-level: true
+  iso-constants@https://codeload.github.com/inverted-capital/iso-constants/tar.gz/2af6fdfb2cacaa03ebd58543703918783e62649f: true
+  node-datachannel: true
+  unrs-resolver: true

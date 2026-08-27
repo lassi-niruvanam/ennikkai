@@ -1,4 +1,4 @@
-import { கிளி } from "@lassi-js/kili";
+import type { கிளி } from "@lassi-js/kili";
 
 import {
   எண்ணிக்கை_சிறப்பு_சொல்,
@@ -74,11 +74,13 @@ export type முறைமை_தகவல்_வரிசை = {
 
 export type எண்ணிக்கை_கிளி = கிளி<முறைமை_தகவல்_வரிசை>;
 
-export const கிளி_தயாரிப்பு = ({
+export const கிளி_தயாரிப்பு = async ({
   விண்மீன்,
 }: {
   விண்மீன்: Constellation;
-}): எண்ணிக்கை_கிளி => {
+}): Promise<எண்ணிக்கை_கிளி> => {
+  const { கிளி } = await import("@lassi-js/kili");
+  
   return new கிளி<முறைமை_தகவல்_வரிசை>({
     விண்மீன்: விண்மீன்,
     அட்டவணை_சாபி,
